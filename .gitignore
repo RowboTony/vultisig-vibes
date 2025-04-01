@@ -34,3 +34,15 @@ pnpm-debug.log*
 # VSCode Workspace
 .vscode/*
 !.vscode/settings.json
+
+# Optional: Cache directories
+.cache/
+.npm/
+
+# Optional: Coverage directories
+.nyc_output/
+
+# Optional: Editor specific
+*.swp
+*.swo
+.idea/
