@@ -1,6 +1,6 @@
-import * as React from "react";
+import React, { FC } from "react";
 
-export const HeroImage: React.FC = () => {
+export const HeroImage: FC = () => {
   return (
     <div className="ml-5 w-[60%] max-md:ml-0 max-md:w-full"> {/* Increased width by 20% */}
       <img

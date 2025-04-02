@@ -4,7 +4,7 @@ import * as React from "react";
 import { HeroContent } from "./HeroContent";
 import { HeroImage } from "./HeroImage";
 
-export const HeroSection: React.FC = () => {
+export const HeroSection: React.FunctionComponent = () => {
   const handleDownload = () => {
     console.log("Download triggered!");
   };
