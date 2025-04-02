@@ -1,3 +1,5 @@
+import React from "react";
+
 const Nav = () => {
     return (
       <nav className="space-x-6 hidden md:flex">

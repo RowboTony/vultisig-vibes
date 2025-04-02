@@ -10,9 +10,9 @@ export const HeroSection: React.FunctionComponent = () => {
   };
 
   return (
-    <section className="flex items-center justify-center px-6 py-16 min-h-[90vh] max-sm:px-4 max-sm:py-12 bg-gradient-to-b from-[#061B3A] to-[#02122B]">
-      <div className="flex flex-col items-center mx-auto my-0 max-w-[1200px]">
-        <div className="flex gap-10 max-md:flex-col items-center justify-between w-full max-md:gap-6">
+    <section className="w-full min-h-[90vh] bg-gradient-to-b from-[#061B3A] to-[#02122B]">
+      <div className="container mx-auto px-4 sm:px-6 py-16 max-w-7xl">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           <HeroContent onDownload={handleDownload} />
           <HeroImage />
         </div>
