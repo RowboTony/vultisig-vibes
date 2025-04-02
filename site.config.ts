@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-    version: "0.2.1",
+    version: "0.3.0",
     launchYear: 2025,
     company: "Vultisig",
   };
