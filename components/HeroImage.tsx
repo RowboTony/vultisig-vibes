@@ -2,7 +2,7 @@ import * as React from "react";
 
 export const HeroImage: React.FC = () => {
   return (
-    <div className="ml-5 w-[45%] max-md:ml-0 max-md:w-full">
+    <div className="ml-5 w-[60%] max-md:ml-0 max-md:w-full"> {/* Increased width by 20% */}
       <img
         alt="Vultisig Crypto Vault Devices"
         src="https://cdn.builder.io/api/v1/image/assets%2Fba252d5412c242bca4d6218689ca1df4%2F6e963ef9893d4be192ef61f95b9f34d9"
