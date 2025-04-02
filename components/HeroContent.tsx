@@ -16,8 +16,10 @@ export const HeroContent: React.FC<HeroContentProps> = ({ onDownload }) => {
           A seedless, self-custodial vault powered by battle-tested cryptography
           and programmable co-signers.
         </p>
-        <DownloadButton onClick={onDownload}>Download Now</DownloadButton>
-      </div>
+        <DownloadButton href="https://vultisig.com/download">
+          Download Now
+        </DownloadButton>
+        </div>
     </div>
   );
 };
