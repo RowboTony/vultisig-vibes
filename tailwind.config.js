@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         brockmann: ['"Brockmann"', 'sans-serif'],
       },
+      animation: {
+        'spin-slow': 'spin 9s linear infinite',
+      },
     },
   },
   plugins: [],
