@@ -2,7 +2,7 @@ import * as React from "react";
 import { DownloadButton } from "./DownloadButton";
 
 interface HeroContentProps {
-  onDownload: () => void;
+  onDownload: () => void; // Example type
 }
 
 export const HeroContent: React.FC<HeroContentProps> = ({ onDownload }) => {

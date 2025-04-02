@@ -22,11 +22,6 @@ export default function Home({ content }) {
       ) : (
         <>
           <HeroSection /> {/* Add the HeroSection component */}
-          <div className="min-h-screen flex items-center justify-center bg-oxford text-white">
-            <h1 className="text-4xl font-bold text-turquoise">
-              Vultisig Landing Page Starter
-            </h1>
-          </div>
           <FeatureGrid />
         </>
       )}
