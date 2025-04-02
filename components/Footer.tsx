@@ -7,11 +7,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-[#061B3A] text-white pt-10 pb-6 px-6 md:px-12 lg:px-20">
-      <div className="border-t border-turquoise/20 pt-10 flex flex-col lg:flex-row justify-between gap-12">
+      <div className="border-t border-turquoise/20 pt-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left column */}
-        <div className="flex flex-col items-center gap-4 flex-1 lg:items-center lg:justify-start lg:text-center lg:[align-items:center] lg:[justify-content:flex-start]">
-
-
+        <div className="flex flex-col items-center lg:col-span-3 gap-4">
           <a href="/" className="group">
             <VultisigLogo />
           </a>
@@ -58,12 +56,12 @@ const Footer = () => {
 
           {/* Version - centered */}
           <div className="w-full text-center">
-            <p className="text-sm text-white/40">v{SITE_CONFIG.version}</p>
+            <p className="text-sm text-white/40 text-red-600 font-bold">v{SITE_CONFIG.version}</p>
           </div>
         </div>
 
         {/* Right columns */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-10">
+        <div className="flex flex-col lg:flex-row lg:col-span-9 gap-10 text-center lg:text-left lg:justify-end lg:pr-2">
           <div>
             <h4 className="font-semibold mb-3">Vultisig</h4>
             <ul className="space-y-2 text-white/80">
