@@ -3,14 +3,14 @@ import Header from "./Header";
 import Nav from "./Nav";
 import VultisigLogo from "./VultisigLogo";
 import Footer from "./Footer";
-import Hero from "./Hero";
-import TechnologyExplainer from "./TechnologyExplainer";
-import MultiFactorSovereignty from "./MultiFactorSovereignty";
-import SeedlessSimplicity from "./SeedlessSimplicity";
-import ProgrammableSovereignty from "./ProgrammableSovereignty";
-import VulticonnectIntegration from "./VulticonnectIntegration";
-import RespawnRestore from "./RespawnRestore";
-import FinalProofCredibility from "./FinalProofCredibility";
+import Hero from "./sections/Hero";
+import TechnologyExplainer from "./sections/TechnologyExplainer";
+import MultiFactorSovereignty from "./sections/MultiFactorSovereignty";
+import SeedlessSimplicity from "./sections/SeedlessSimplicity";
+import ProgrammableSovereignty from "./sections/ProgrammableSovereignty";
+import VulticonnectIntegration from "./sections/VulticonnectIntegration";
+import RespawnRestore from "./sections/RespawnRestore";
+import FinalProofCredibility from "./sections/FinalProofCredibility";
 
 export default function Layout({ children }) {
   return (
