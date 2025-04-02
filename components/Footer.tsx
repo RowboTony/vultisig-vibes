@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Version - centered */}
           <div className="w-full text-center">
-            <p className="text-sm text-white/40 text-red-600 font-bold">v{SITE_CONFIG.version}</p>
+            <p className="text-sm text-red-600 font-bold">v{SITE_CONFIG.version}</p>
           </div>
         </div>
 
