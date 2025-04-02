@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Github, Twitter, MessageCircleMore, Send } from "lucide-react";
+import { SITE_CONFIG } from "../site.config";
 
 export const Footer = () => {
   return (
@@ -44,8 +45,10 @@ export const Footer = () => {
                 <Send className="w-6 h-6 text-white hover:text-teal-400 transition" />
               </a>
             </div>
-            <p className="text-xs text-white opacity-50">© 2025 Vultisig</p>
-            <p className="text-xs text-white opacity-50">v1.1.0</p>
+            <p className="text-xs text-white opacity-50">
+              <span>&copy; {new Date().getFullYear()} Vultisig</span>
+            </p>
+            <p className="text-xs text-white opacity-50"><span>v{SITE_CONFIG.version}</span></p>
           </div>
 
           {/* Shortcut Links */}
