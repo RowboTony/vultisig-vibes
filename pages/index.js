@@ -1,6 +1,5 @@
 import { BuilderComponent, builder } from '@builder.io/react'
 import FeatureGrid from '../components/FeatureGrid'
-import HeroSection from '../components/HeroSection' // Import the HeroSection component
 
 builder.init('ba252d5412c242bca4d6218689ca1df4')
 
