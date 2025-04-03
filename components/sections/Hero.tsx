@@ -5,48 +5,50 @@ import { ShieldCheck, KeyRound, LockKeyhole } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="py-28 px-6 bg-gradient-to-b from-[#061B3A] to-[#02122B] text-white">
+    <section className="pt-10 pb-16 px-6 bg-gradient-to-b from-[#061B3A] to-[#02122B] text-white">
       <div className="container mx-auto max-w-3xl text-center">
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-12">
+        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-snug mb-10">
           <span className="hero-word" data-word="seedless">Seedless</span>.{" "}
           <span className="hero-word" data-word="sovereign">Sovereign</span>.{" "}
           <span className="hero-word" data-word="secure">Secure</span>.
         </h1>
 
         {/* Bullet List */}
-        <div className="space-y-8 text-left">
+        <div className="space-y-5 text-left">
           <div className="flex items-start gap-4" data-bullet="seedless">
             <KeyRound className="text-teal-400 w-6 h-6 flex-shrink-0 mt-1" />
-            <p className="text-lg leading-relaxed">
-              <span className="text-teal-400 font-semibold">Seedless</span> — No seed phrase, eliminating risk and complexity.
+            <p className="text-[17px] leading-snug">
+              No seed phrase, eliminating risk and complexity.
             </p>
           </div>
 
           <div className="flex items-start gap-4" data-bullet="sovereign">
             <ShieldCheck className="text-teal-400 w-6 h-6 flex-shrink-0 mt-1" />
-            <p className="text-lg leading-relaxed">
-              <span className="text-teal-400 font-semibold">Sovereign</span> — You retain full control—truly decentralized custody.
+            <p className="text-[17px] leading-snug">
+              You retain full control—truly decentralized custody.
             </p>
           </div>
 
           <div className="flex items-start gap-4" data-bullet="secure">
             <LockKeyhole className="text-teal-400 w-6 h-6 flex-shrink-0 mt-1" />
-            <p className="text-lg leading-relaxed">
-              <span className="text-teal-400 font-semibold">Secure</span> — Industry-grade security (TSS cryptography).
+            <p className="text-[17px] leading-snug">
+              Industry-grade security (TSS cryptography).
             </p>
           </div>
         </div>
 
+
         {/* Hero Image */}
         <div className="mt-16">
           <Image
-            src="/your-placeholder-image.png" // Update this!
+            src="/images/security.png"
             alt="Vultisig App Screenshot"
             width={400}
             height={400}
             className="mx-auto rounded-xl shadow-lg"
           />
+
         </div>
 
         {/* CTA */}
