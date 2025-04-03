@@ -15,7 +15,7 @@ module.exports = {
         tertiary: '#02122B',
       },
       fontFamily: {
-        brockmann: ['"Brockmann"', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'system-ui'],
       },
       animation: {
         'spin-slow': 'spin 9s linear infinite',
