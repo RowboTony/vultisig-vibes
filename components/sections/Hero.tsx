@@ -1,44 +1,61 @@
-"use client";
-
+'use client';
 import * as React from "react";
-import { DownloadButton } from "../DownloadButton";
+import Image from "next/image";
+import { ShieldCheck, KeyRound, LockKeyhole } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const handleDownload = () => {
-    console.log("Download triggered!");
-  };
-
   return (
-    <section className="w-full min-h-[90vh] bg-gradient-to-b from-[#061B3A] to-[#02122B]">
-      <div className="container mx-auto px-4 sm:px-6 py-16 max-w-7xl">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-          {/* Hero Content */}
-          <div className="flex-1 max-w-xl md:max-w-2xl">
-            <div className="text-left md:pr-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-                Secure Your Crypto with Vultisig
-              </h1>
-              <p className="text-lg sm:text-xl leading-relaxed text-white opacity-90 mb-8">
-                A seedless, self-custodial vault powered by battle-tested cryptography
-                and programmable co-signers.
-              </p>
-              <div className="flex md:justify-start justify-center">
-                <DownloadButton href="https://vultisig.com/download">
-                  Download Now
-                </DownloadButton>
-              </div>
-            </div>
+    <section className="py-28 px-6 bg-gradient-to-b from-[#061B3A] to-[#02122B] text-white">
+      <div className="container mx-auto max-w-3xl text-center">
+        {/* Headline */}
+        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-12">
+          <span className="hero-word" data-word="seedless">Seedless</span>.{" "}
+          <span className="hero-word" data-word="sovereign">Sovereign</span>.{" "}
+          <span className="hero-word" data-word="secure">Secure</span>.
+        </h1>
+
+        {/* Bullet List */}
+        <div className="space-y-8 text-left">
+          <div className="flex items-start gap-4" data-bullet="seedless">
+            <KeyRound className="text-teal-400 w-6 h-6 flex-shrink-0 mt-1" />
+            <p className="text-lg leading-relaxed">
+              <span className="text-teal-400 font-semibold">Seedless</span> — No seed phrase, eliminating risk and complexity.
+            </p>
           </div>
 
-          {/* Hero Image */}
-          <div className="flex-1 flex justify-center items-center">
-            <img
-              alt="Vultisig Crypto Vault Devices"
-              src="https://cdn.builder.io/api/v1/image/assets%2Fba252d5412c242bca4d6218689ca1df4%2F6e963ef9893d4be192ef61f95b9f34d9"
-              className="w-full max-w-[400px] md:max-w-[309px] h-auto object-contain"
-            />
+          <div className="flex items-start gap-4" data-bullet="sovereign">
+            <ShieldCheck className="text-teal-400 w-6 h-6 flex-shrink-0 mt-1" />
+            <p className="text-lg leading-relaxed">
+              <span className="text-teal-400 font-semibold">Sovereign</span> — You retain full control—truly decentralized custody.
+            </p>
+          </div>
+
+          <div className="flex items-start gap-4" data-bullet="secure">
+            <LockKeyhole className="text-teal-400 w-6 h-6 flex-shrink-0 mt-1" />
+            <p className="text-lg leading-relaxed">
+              <span className="text-teal-400 font-semibold">Secure</span> — Industry-grade security (TSS cryptography).
+            </p>
           </div>
         </div>
+
+        {/* Hero Image */}
+        <div className="mt-16">
+          <Image
+            src="/your-placeholder-image.png" // Update this!
+            alt="Vultisig App Screenshot"
+            width={400}
+            height={400}
+            className="mx-auto rounded-xl shadow-lg"
+          />
+        </div>
+
+        {/* CTA */}
+        <a
+          href="https://vultisig.com/download"
+          className="inline-block mt-12 px-10 py-4 rounded-full bg-teal-500 text-white text-lg font-semibold shadow-md hover:bg-teal-600 transition"
+        >
+          Get Vultisig
+        </a>
       </div>
     </section>
   );
