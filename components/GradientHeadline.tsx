@@ -19,7 +19,7 @@ export default function GradientHeadline({
   };
 
   return (
-    <h2 className={`font-bold tracking-tight leading-tight uppercase ${sizeClasses[size]} ${className}`}>
+    <h2 className={`font-extrabold tracking-tight leading-[0.95] uppercase ${sizeClasses[size]} ${className}`}>
       <span className="gradient-text">{children}</span>
     </h2>
   );

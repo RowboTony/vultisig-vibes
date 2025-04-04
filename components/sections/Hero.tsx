@@ -15,13 +15,19 @@ const Hero: React.FC = () => {
         <div className="max-w-[1000px] mx-auto">
           {/* Headline */}
           <div className="text-center md:text-left">
-            <GradientHeadline size="xl" className="mb-6 max-w-4xl leading-[1.15] mx-auto md:mx-0">
-              <span className="hidden min-[460px]:inline">Seedless.</span>
-              <span className="min-[460px]:hidden">Seedless</span>{' '}
-              <span className="hidden min-[460px]:inline">Sovereign.</span>
-              <span className="min-[460px]:hidden">Sovereign</span>{' '}
-              <span className="hidden min-[460px]:inline">Secure.</span>
-              <span className="min-[460px]:hidden">Secure</span>
+            <GradientHeadline size="xl" className="mb-6 max-w-4xl mx-auto md:mx-0 flex flex-col md:block">
+              <div className="mb-[-0.075em]">
+                <span className="hidden min-[460px]:inline">Seedless.</span>
+                <span className="min-[460px]:hidden">Seedless</span>
+              </div>
+              <div className="mb-[-0.075em]">
+                <span className="hidden min-[460px]:inline">Sovereign.</span>
+                <span className="min-[460px]:hidden">Sovereign</span>
+              </div>
+              <div>
+                <span className="hidden min-[460px]:inline">Secure.</span>
+                <span className="min-[460px]:hidden">Secure</span>
+              </div>
             </GradientHeadline>
 
             <p className="vultisig-subheading max-w-2xl mx-auto md:mx-0 mb-8">
