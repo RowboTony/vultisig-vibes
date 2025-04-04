@@ -44,8 +44,8 @@ export default function AboutSitePage() {
       <p className="text-lg text-gray-300 leading-relaxed mb-4">This wasn't just a landing page build. It was a mission.</p>
       <p className="text-lg text-gray-300 leading-relaxed">
         As someone who's been deeply aligned with Vultisig from the start—not just as a supporter,
-        but as a long-time believer and hobbyist contributor since first hearing @jpthor on the
-        <strong className="text-cyanAccent"> WOAS </strong> podcast (June 25, 2024)—I approached this challenge as something more
+        but as a long-time believer and hobbyist contributor since first hearing <a href="https://x.com/jpthor" target="_blank" rel="noopener noreferrer" className="text-cyanAccent hover:text-turquoise transition-colors duration-300">@jpthor</a> on the
+        <a href="https://podcasts.apple.com/us/podcast/btc-down-alts-outperform-crypto-town-hall-w-thorchain/id1500066831?i=1000660227158" target="_blank" rel="noopener noreferrer" className="text-cyanAccent hover:text-turquoise transition-colors duration-300"> WOAS  podcast (June 25, 2024)</a>—I approached this challenge as something more
         than a contest. It felt like a quiet job interview. One I prepared for with care, precision,
         and respect for the vision you're building.
       </p>
