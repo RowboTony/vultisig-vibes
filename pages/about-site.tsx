@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import AnimatedVultisigLogo from '../components/AnimatedVultisigLogo';
+import GradientDivider from '../components/GradientDivider';
 
 export default function AboutSitePage() {
   return (
@@ -12,16 +13,16 @@ export default function AboutSitePage() {
           Seedless by design. Sovereign by default.
         </h2>
       </div>
-      
-      <h1 className="text-4xl md:text-5xl font-bold mb-8 font-mono tracking-tight leading-tight text-transparent bg-clip-text bg-text-gradient">
-        Vultisig Landing Page Challenge — Submission by Tony ("RowboTony")
+
+      <h1 className="text-4xl md:text-5xl font-bold font-mono tracking-tight leading-tight text-transparent bg-clip-text bg-text-gradient">
+        Vultisig Landing Page Challenge — Submission by RowboTony (<a href="https://x.com/tgroff" target="_blank" rel="noopener noreferrer" className="hover:text-cyanAccent transition-colors">x.com/tgroff</a>)
       </h1>
       {/* Hero section with animated logo */}
 
       <h2 className="text-3xl font-bold mt-12 mb-6 font-mono text-cyanAccent">Submission Summary</h2>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">Thank you for this opportunity.</p>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">This wasn't just a landing page build. It was a mission.</p>
-      <p className="text-lg text-gray-300 leading-relaxed mb-8">
+      <p className="text-lg text-gray-300 leading-relaxed">
         As someone who's been deeply aligned with Vultisig from the start—not just as a supporter,
         but as a long-time believer and hobbyist contributor since first hearing @jpthor on the
         <strong className="text-cyanAccent"> WOAS </strong> podcast (June 25, 2024)—I approached this challenge as something more
@@ -29,9 +30,9 @@ export default function AboutSitePage() {
         and respect for the vision you're building.
       </p>
 
-      <hr className="my-10 border-gray-700" />
+      <GradientDivider />
 
-      <h3 className="text-2xl font-bold mt-10 mb-5 font-mono text-cyanAccent">Where I Started</h3>
+      <h3 className="text-2xl font-bold mb-5 font-mono text-cyanAccent">Where I Started</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">
         Already familiar with Vultisig's goals and ethos, I didn't have to "study" the brand—I've
         lived with it, used it, and followed its evolution closely. I've submitted bug reports,
@@ -49,9 +50,9 @@ export default function AboutSitePage() {
         <p className="text-xl italic text-gray-200">"Does this respect and reflect Vultisig's sovereign, seedless, non-custodial foundation?"</p>
       </blockquote>
 
-      <hr className="my-10 border-gray-700" />
+      <GradientDivider />
 
-      <h3 className="text-2xl font-bold mt-10 mb-5 font-mono text-cyanAccent">Refining the Message</h3>
+      <h3 className="text-2xl font-bold mb-5 font-mono text-cyanAccent">Refining the Message</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">
         I focused on communicating cryptographic depth without technical fog. MPC and TSS aren't
         simple concepts—but they represent decades of security research, and Vultisig makes them
@@ -68,14 +69,14 @@ export default function AboutSitePage() {
           everywhere, on any device."
         </p>
       </blockquote>
-      <p className="text-lg text-gray-300 leading-relaxed mb-8">
+      <p className="text-lg text-gray-300 leading-relaxed">
         Every headline. Every subheader. Every call to action.<br />
         Nothing was filler. Everything was intentional.
       </p>
 
-      <hr className="my-10 border-gray-700" />
+      <GradientDivider />
 
-      <h3 className="text-2xl font-bold mt-10 mb-5 font-mono text-cyanAccent">Design Ethos</h3>
+      <h3 className="text-2xl font-bold mb-5 font-mono text-cyanAccent">Design Ethos</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">
         The existing vultisig.com and sub-sites already look fantastic—credit where it's due.
         The brand, mascot, color scheme, and layout all reflect world-class design instincts.
@@ -117,14 +118,14 @@ export default function AboutSitePage() {
         So instead, I prioritized openness, accessibility, and trust—especially for a product
         built on sovereignty.
       </p>
-      <p className="text-lg text-gray-300 leading-relaxed mb-8">
+      <p className="text-lg text-gray-300 leading-relaxed">
         I'd also be happy to contribute further on any accessibility work for the Vultisig app itself.
         Accessibility is a personal passion of mine, and I believe it's critical for global adoption.
       </p>
 
-      <hr className="my-10 border-gray-700" />
+      <GradientDivider />
 
-      <h3 className="text-2xl font-bold mt-10 mb-5 font-mono text-cyanAccent">Mobile-First Focus</h3>
+      <h3 className="text-2xl font-bold mb-5 font-mono text-cyanAccent">Mobile-First Focus</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">The world is mobile. And so was my build.</p>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">
         While the bulk of the submissions are likely to be desktop-first concepts, I flipped it:
@@ -136,16 +137,16 @@ export default function AboutSitePage() {
         I submit early on April 5th. The deadline stated "submit by April 5," which I interpreted
         as 11:59 PM UTC-11.
       </p>
-      <p className="text-lg text-gray-300 leading-relaxed mb-8">
+      <p className="text-lg text-gray-300 leading-relaxed">
         To be safe, I'm submitting early while continuing to ship improvements. Although only
         <strong className="text-cyanAccent"> four sections </strong> are currently visible on the live version, the
         <strong className="text-cyanAccent"> full build includes nine</strong>, with the remainder being polished and released
         nearly hourly. I expect the review process will continue through the weekend.
       </p>
 
-      <hr className="my-10 border-gray-700" />
+      <GradientDivider />
 
-      <h3 className="text-2xl font-bold mt-10 mb-5 font-mono text-cyanAccent">Technical Build</h3>
+      <h3 className="text-2xl font-bold mb-5 font-mono text-cyanAccent">Technical Build</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">This wasn't just a Figma mockup—it was production-level code.</p>
       <ul className="list-disc pl-6 my-6 space-y-3 text-gray-300">
         <li className="text-lg">Built in <strong className="text-cyanAccent">React + Tailwind</strong>, with clean JSX and modular components</li>
@@ -160,11 +161,11 @@ export default function AboutSitePage() {
         <li className="text-lg">Annotating the repo for clarity and learning</li>
         <li className="text-lg">Opening the project to community discussion and iteration</li>
       </ul>
-      <p className="text-lg text-gray-300 leading-relaxed mb-8">Because I believe in the open ethos Vultisig embodies.</p>
+      <p className="text-lg text-gray-300 leading-relaxed">Because I believe in the open ethos Vultisig embodies.</p>
 
-      <hr className="my-10 border-gray-700" />
+      <GradientDivider />
 
-      <h3 className="text-2xl font-bold mt-10 mb-5 font-mono text-cyanAccent">Why I Care</h3>
+      <h3 className="text-2xl font-bold mb-5 font-mono text-cyanAccent">Why I Care</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">
         I've spent years analyzing wallets—especially hardware wallets. I've used them all.
         And I've been underwhelmed.
@@ -187,12 +188,12 @@ export default function AboutSitePage() {
         </p>
       </blockquote>
 
-      <hr className="my-10 border-gray-700" />
+      <GradientDivider />
 
-      <h3 className="text-2xl font-bold mt-10 mb-5 font-mono text-cyanAccent">Final Thought</h3>
+      <h3 className="text-2xl font-bold mb-5 font-mono text-cyanAccent">Final Thought</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">Vultisig didn't just build something cool.</p>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">Vultisig built the missing piece.</p>
-      <p className="text-lg text-gray-300 leading-relaxed mb-8">
+      <p className="text-lg text-gray-300 leading-relaxed">
         So I didn't treat this like a design gig.<br />
         I treated it like a legacy.<br />
         One I want to be part of.

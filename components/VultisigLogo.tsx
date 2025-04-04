@@ -1,8 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const VultisigLogo = ({ className = "" }: { className?: string }) => {
   const [isTapped, setIsTapped] = useState(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+  // Initial load effect
+  useEffect(() => {
+    // Set initial glow
+    setIsInitialLoad(true);
+
+    // Fade out after 1 second
+    const timer = setTimeout(() => {
+      setIsInitialLoad(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleTap = () => {
     setIsTapped(true);
@@ -16,9 +30,7 @@ const VultisigLogo = ({ className = "" }: { className?: string }) => {
     >
       <svg
         viewBox="0 0 24 24"
-        className={`h-8 w-8 sm:h-9 sm:w-9 mr-2 mt-0.5 transition-all duration-300 ${
-          isTapped ? "animate-pulse" : ""
-        } group-hover:animate-pulse`}
+        className={`h-8 w-8 sm:h-9 sm:w-9 mr-2 mt-0.5 transition-all duration-300`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -57,9 +69,14 @@ const VultisigLogo = ({ className = "" }: { className?: string }) => {
         </defs>
       </svg>
       <span
-        className={`text-2xl font-medium tracking-wide text-white/90 transition-colors duration-300 drop-shadow-sm align-middle ${
-          isTapped ? "animate-pulse" : ""
-        } group-hover:text-turquoise group-hover:animate-pulse`}
+        className={`text-2xl font-medium tracking-wide transition-all duration-300 drop-shadow-sm align-middle`}
+        style={{
+          color: isInitialLoad || isTapped || false ? "#33E6BF" : "rgba(255, 255, 255, 0.9)",
+          filter: isInitialLoad || isTapped || false ? "drop-shadow(0 0 4px rgba(51, 230, 191, 0.5))" : "none",
+          transition: "color 0.3s ease, filter 0.3s ease"
+        }}
+        onMouseEnter={() => setIsTapped(true)}
+        onMouseLeave={() => setTimeout(() => setIsTapped(false), 300)}
       >
         Vultisig
       </span>
