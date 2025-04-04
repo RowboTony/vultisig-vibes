@@ -19,7 +19,7 @@ const Footer = () => {
               href="https://github.com/Vultisig"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-turquoise"
+              className="hover:text-turquoise transition-colors duration-300"
             >
               <Github />
             </a>
@@ -27,7 +27,7 @@ const Footer = () => {
               href="https://x.com/vultisig"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-turquoise"
+              className="hover:text-turquoise transition-colors duration-300"
             >
               <Twitter />
             </a>
@@ -35,7 +35,7 @@ const Footer = () => {
               href="https://discord.gg/54wEtGYxuv"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-turquoise"
+              className="hover:text-turquoise transition-colors duration-300"
             >
               <MessageCircle />
             </a>
@@ -43,7 +43,7 @@ const Footer = () => {
               href="https://t.me/vultisig"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-turquoise"
+              className="hover:text-turquoise transition-colors duration-300"
             >
               <Send />
             </a>
@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="w-full text-center">
             <a
               href="/about-site"
-              className="text-sm font-bold font-mono text-persian hover:text-turquoise transition-colors duration-300"
+              className="text-sm font-bold font-mono text-persian hover:text-turquoise transition-all duration-300 hover:border-b hover:border-turquoise/50 pb-[1px]"
               style={{
                 filter: "drop-shadow(0 0 0 rgba(51, 230, 191, 0.5))",
               }}
@@ -71,25 +71,25 @@ const Footer = () => {
         {/* Right columns */}
         <div className="flex flex-col lg:flex-row lg:col-span-9 gap-10 text-center lg:text-left lg:justify-end lg:pr-2">
           <div>
-            <h4 className="font-semibold mb-3">Vultisig</h4>
-            <ul className="space-y-2 text-white/80">
+            <h4 className="font-semibold mb-3 text-turquoise font-mono tracking-wide text-sm uppercase">Vultisig</h4>
+            <ul className="space-y-1 text-white/80 leading-tight">
               <li>
-                <a href="/how-it-works" className="hover:text-white">
+                <a href="/how-it-works" className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="/backed-by" className="hover:text-white">
+                <a href="/backed-by" className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]">
                   Backed by
                 </a>
               </li>
               <li>
-                <a href="/docs" className="hover:text-white">
+                <a href="/docs" className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]">
                   Docs
                 </a>
               </li>
               <li>
-                <a href="/vult" className="hover:text-white">
+                <a href="/vult" className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]">
                   $VULT
                 </a>
               </li>
@@ -98,7 +98,7 @@ const Footer = () => {
                   href="https://chromewebstore.google.com/detail/vulticonnect/..."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white"
+                  className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]"
                 >
                   Extension
                 </a>
@@ -106,15 +106,15 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-3">Support</h4>
-            <ul className="space-y-2 text-white/80">
+            <h4 className="font-semibold mb-3 text-turquoise font-mono tracking-wide text-sm uppercase">Support</h4>
+            <ul className="space-y-1 text-white/80 leading-tight">
               <li>
-                <a href="/support" className="hover:text-white">
+                <a href="/support" className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]">
                   Support
                 </a>
               </li>
               <li>
-                <a href="/faq" className="hover:text-white">
+                <a href="/faq" className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]">
                   FAQs
                 </a>
               </li>
@@ -123,7 +123,7 @@ const Footer = () => {
                   href="https://docs.vultisig.com/..."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white"
+                  className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]"
                 >
                   Audits
                 </a>
@@ -133,7 +133,7 @@ const Footer = () => {
                   href="https://x.com/vultisig"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white"
+                  className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]"
                 >
                   Contact Us
                 </a>
@@ -141,15 +141,15 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-3">Legal</h4>
-            <ul className="space-y-2 text-white/80">
+            <h4 className="font-semibold mb-3 text-turquoise font-mono tracking-wide text-sm uppercase">Legal</h4>
+            <ul className="space-y-1 text-white/80 leading-tight">
               <li>
-                <a href="/termofservice" className="hover:text-white">
+                <a href="/termofservice" className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="/privacy" className="hover:text-white">
+                <a href="/privacy" className="hover:text-turquoise transition-all duration-300 text-sm hover:border-b hover:border-turquoise/50 pb-[1px]">
                   Privacy Policy
                 </a>
               </li>
