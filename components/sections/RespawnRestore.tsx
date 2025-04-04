@@ -2,13 +2,13 @@ import React from "react";
 
 export default function RespawnRestore() {
   return (
-    <section id="respawn-restore" className="py-16 md:py-24 px-4 relative overflow-hidden">
+    <section id="respawn-restore" className="px-4 relative overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-radial from-blueAccent/5 to-transparent opacity-30 pointer-events-none"></div>
 
       <div className="vultisig-container max-w-4xl mx-auto">
-        <h2 className="vultisig-heading mb-8">
-          <span className="gradient-text">Respawn & Restore</span>
+        <h2 className="mb-8 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl text-center">
+          <span className="text-transparent bg-clip-text bg-text-gradient">Respawn & Restore</span>
         </h2>
 
         <div className="space-y-6 mt-8">

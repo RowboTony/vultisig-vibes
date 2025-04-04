@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-[#061B3A] text-white pt-10 pb-6 px-6 md:px-12 lg:px-20">
-      <div className="border-t border-turquoise/20 pt-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="pt-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left column */}
         <div className="flex flex-col items-center lg:col-span-3 gap-4">
           <a href="/" className="group">

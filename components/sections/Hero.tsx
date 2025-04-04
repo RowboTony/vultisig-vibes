@@ -6,7 +6,7 @@ import GradientHeadline from "../GradientHeadline";
 
 const Hero: React.FC = () => {
   return (
-    <section className="pt-7 pb-24 relative overflow-hidden">
+    <section className="pt-7 pb-2 relative overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-radial from-blueAccent/10 to-transparent opacity-40 pointer-events-none"></div>
 
