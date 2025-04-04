@@ -14,21 +14,24 @@ const Hero: React.FC = () => {
         {/* Content wrapper with proper centering */}
         <div className="max-w-[1000px] mx-auto">
           {/* Headline */}
+          {/* Headline */}
           <div className="text-center md:text-left">
-            <GradientHeadline size="xl" className="mb-6 max-w-4xl mx-auto md:mx-0 flex flex-col md:block">
-              <div className="mb-[-0.075em]">
-                <span className="hidden min-[460px]:inline">Seedless.</span>
-                <span className="min-[460px]:hidden">Seedless</span>
+            <h2 className="mb-6 max-w-4xl mx-auto md:mx-0 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl">
+              <div className="flex flex-col md:block">
+                <div className="mb-[-0.075em]">
+                  <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Seedless.</span>
+                  <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Seedless</span>
+                </div>
+                <div className="mb-[-0.075em]">
+                  <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Sovereign.</span>
+                  <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Sovereign</span>
+                </div>
+                <div>
+                  <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Secure.</span>
+                  <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Secure</span>
+                </div>
               </div>
-              <div className="mb-[-0.075em]">
-                <span className="hidden min-[460px]:inline">Sovereign.</span>
-                <span className="min-[460px]:hidden">Sovereign</span>
-              </div>
-              <div>
-                <span className="hidden min-[460px]:inline">Secure.</span>
-                <span className="min-[460px]:hidden">Secure</span>
-              </div>
-            </GradientHeadline>
+            </h2>
 
             <p className="vultisig-subheading max-w-2xl mx-auto md:mx-0 mb-8">
               The next generation of self-custody that eliminates seed phrases while enhancing security and control.
