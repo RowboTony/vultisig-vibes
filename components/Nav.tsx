@@ -23,7 +23,7 @@ const Nav = () => {
       <div className="md:hidden">
         <button onClick={() => setIsOpen(true)} aria-label="Open Menu">
           <CircleEllipsis
-            className="w-8 h-8 text-persian hover:text-turquoise transition"
+            className="w-8 h-8 text-persian hover:text-turquoise transition text-extrabold"
             strokeWidth={0.9}
           />
 

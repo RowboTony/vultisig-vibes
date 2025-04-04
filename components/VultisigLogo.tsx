@@ -12,11 +12,11 @@ const VultisigLogo = ({ className = "" }: { className?: string }) => {
   return (
     <div
       onClick={handleTap}
-      className={`group flex items-center gap-3 cursor-pointer ${className}`}
+      className={`group inline-flex items-center cursor-pointer ${className}`}
     >
       <svg
         viewBox="0 0 24 24"
-        className={`h-12 w-12 transition-all duration-300 ${
+        className={`h-8 w-8 sm:h-9 sm:w-9 mr-2 mt-0.5 transition-all duration-300 ${
           isTapped ? "animate-pulse" : ""
         } group-hover:animate-pulse`}
         fill="none"
@@ -57,7 +57,7 @@ const VultisigLogo = ({ className = "" }: { className?: string }) => {
         </defs>
       </svg>
       <span
-        className={`text-3xl font-bold transition-colors duration-300 ${
+        className={`text-2xl font-medium tracking-wide text-white/90 transition-colors duration-300 drop-shadow-sm align-middle ${
           isTapped ? "animate-pulse" : ""
         } group-hover:text-turquoise group-hover:animate-pulse`}
       >

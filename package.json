@@ -10,6 +10,7 @@
   "dependencies": {
     "@builder.io/react": "^3.0.0",
     "@fontsource/inter": "^5.2.5",
+    "@fontsource/jetbrains-mono": "^5.2.5",
     "@fontsource/plus-jakarta-sans": "^5.2.5",
     "framer-motion": "^12.6.3",
     "lucide-react": "^0.486.0",

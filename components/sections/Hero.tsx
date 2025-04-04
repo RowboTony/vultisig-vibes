@@ -2,62 +2,94 @@
 import * as React from "react";
 import Image from "next/image";
 import { ShieldCheck, KeyRound, LockKeyhole } from 'lucide-react';
+import GradientHeadline from "../GradientHeadline";
 
 const Hero: React.FC = () => {
   return (
-    <section className="pt-10 pb-16 px-6 bg-gradient-to-b from-[#061B3A] to-[#02122B] text-white">
-      <div className="container mx-auto max-w-3xl text-center">
-        {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight max-w-5xl mx-auto text-center">
-          Seedless. Sovereign. Secure.
-        </h1>
+    <section className="pt-7 pb-24 relative overflow-hidden">
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-radial from-blueAccent/10 to-transparent opacity-40 pointer-events-none"></div>
 
+      <div className="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-10">
+        {/* Content wrapper with proper centering */}
+        <div className="max-w-[1000px] mx-auto">
+          {/* Headline */}
+          <div className="text-center md:text-left">
+            <GradientHeadline size="xl" className="mb-6 max-w-4xl leading-[1.15] mx-auto md:mx-0">
+              <span className="hidden min-[460px]:inline">Seedless.</span>
+              <span className="min-[460px]:hidden">Seedless</span>{' '}
+              <span className="hidden min-[460px]:inline">Sovereign.</span>
+              <span className="min-[460px]:hidden">Sovereign</span>{' '}
+              <span className="hidden min-[460px]:inline">Secure.</span>
+              <span className="min-[460px]:hidden">Secure</span>
+            </GradientHeadline>
 
-        {/* Bullet List */}
-        <div className="space-y-6 max-w-3xl mx-auto text-left md:text-left pt-6">
-          <div className="flex items-start gap-4" data-bullet="seedless">
-            <KeyRound className="text-teal-400 w-7 h-7 flex-shrink-0 mt-1" />
-            <p className="text-[18px] md:text-[20px] leading-relaxed mt-[2px]">
-              No seed phrase, eliminating risk and complexity.
+            <p className="vultisig-subheading max-w-2xl mx-auto md:mx-0 mb-8">
+              The next generation of self-custody that eliminates seed phrases while enhancing security and control.
             </p>
           </div>
 
-          <div className="flex items-start gap-4" data-bullet="sovereign">
-            <ShieldCheck className="text-teal-400 w-7 h-7 flex-shrink-0 mt-1" />
-            <p className="text-[18px] md:text-[20px] leading-relaxed mt-[2px]">
-              You retain full control—truly decentralized custody.
-            </p>
+          {/* Bullet List */}
+          <div className="space-y-6 max-w-3xl mx-auto md:mx-0 mt-8">
+            <div className="flex items-start gap-2" data-bullet="seedless">
+              <div className="flex-shrink-0 flex justify-center items-center w-12 h-10 ">
+                <KeyRound className="text-cyanAccent w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-cyanAccent mt-1 mb-1 font-bold tracking-normal font-mono">Seedless Security</h3>
+                <p className="vultisig-paragraph">
+                  No seed phrase, eliminating risk and complexity.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-2" data-bullet="sovereign">
+              <div className="flex-shrink-0 flex justify-center items-center w-12 h-10 ">
+                <ShieldCheck className="text-cyanAccent w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-cyanAccent mt-1 mb-1 font-bold tracking-normal font-mono">True Sovereignty</h3>
+                <p className="vultisig-paragraph">
+                  You retain full control—truly decentralized custody.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-2" data-bullet="secure">
+              <div className="flex-shrink-0 flex justify-center items-center w-12 h-10 ">
+                <LockKeyhole className="text-cyanAccent w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-cyanAccent mt-1 mb-1 font-bold tracking-normal font-mono">Multi-Chain Support</h3>
+                <p className="vultisig-paragraph">
+                  Industry-grade security with TSS cryptography across multiple blockchains.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="flex items-start gap-4" data-bullet="secure">
-            <LockKeyhole className="text-teal-400 w-7 h-7 flex-shrink-0 mt-1" />
-            <p className="text-[18px] md:text-[20px] leading-relaxed mt-[2px]">
-              Industry-grade security (TSS cryptography).
-            </p>
+          {/* Hero Image */}
+          <div className="mt-10 relative">
+            <div className="absolute inset-0"></div>
+            <Image
+              src="/images/security.png"
+              alt="Vultisig App Screenshot"
+              width={500}
+              height={500}
+              className="mx-auto"
+            />
+          </div>
+
+          {/* CTA */}
+          <div className="mt-12 text-center">
+            <a
+              href="https://vultisig.com/download"
+              className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-blueAccent to-cyanAccent text-white text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
+            >
+              Download Vultisig
+            </a>
           </div>
         </div>
-
-
-
-        {/* Hero Image */}
-        <div className="mt-16">
-          <Image
-            src="/images/security.png"
-            alt="Vultisig App Screenshot"
-            width={400}
-            height={400}
-            className="mx-auto rounded-xl shadow-lg"
-          />
-
-        </div>
-
-        {/* CTA */}
-        <a
-          href="https://vultisig.com/download"
-          className="inline-block mt-12 px-10 py-4 rounded-full bg-teal-500 text-white text-lg font-semibold shadow-md hover:bg-teal-600 transition"
-        >
-          Get Vultisig
-        </a>
       </div>
     </section>
   );
