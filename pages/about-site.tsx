@@ -15,7 +15,27 @@ export default function AboutSitePage() {
       </div>
 
       <h1 className="text-4xl md:text-5xl font-bold font-mono tracking-tight leading-tight text-transparent bg-clip-text bg-text-gradient">
-        Vultisig Landing Page Challenge — Submission by RowboTony (<a href="https://x.com/tgroff" target="_blank" rel="noopener noreferrer" className="hover:text-cyanAccent transition-colors">x.com/tgroff</a>)
+        <div>Vultisig Landing Page Challenge — Submission by:</div>
+        <div className="flex items-center">
+          <a href="https://x.com/tgroff" rel="noopener noreferrer" className="inline-flex items-center group">
+            <span className="text-persian group-hover:text-turquoise transition-colors duration-300"
+              style={{
+                filter: "drop-shadow(0 0 1px rgba(51, 230, 191, 0.5))",
+              }}>
+              RowboTony
+            </span>
+            <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-persian group-hover:border-turquoise transition-colors duration-300 ml-2"
+              style={{
+                filter: "drop-shadow(0 0 4px rgba(51, 230, 191, 0.5))",
+              }}>
+              <img
+                src="https://i2.seadn.io/ethereum/0xa98b29a8f5a247802149c268ecf860b8308b7291/3c9e7623305d8b2217a54939c2383104.png?w=1000"
+                alt="ThroGuard #3443"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </a>
+        </div>
       </h1>
       {/* Hero section with animated logo */}
 
@@ -96,10 +116,10 @@ export default function AboutSitePage() {
         <p className="text-xl font-semibold text-transparent bg-clip-text bg-text-gradient">No hype. No overload. Just clarity, elegance, and purpose.</p>
       </blockquote>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">I also made a key usability choice:<br />
-      While reviewing the current site, I noticed a global CSS rule:</p>
+        While reviewing the current site, I noticed a global CSS rule:</p>
       <pre className="bg-gray-800 rounded-lg p-4 my-8 overflow-x-auto">
         <code className="text-sm text-gray-300 font-mono">
-{`* {
+          {`* {
   user-select: none;
 }`}
         </code>
