@@ -56,7 +56,15 @@ const Footer = () => {
 
           {/* Version - centered */}
           <div className="w-full text-center">
-            <p className="text-sm text-red-600 font-bold">v{SITE_CONFIG.version}</p>
+            <a
+              href="/about-site"
+              className="text-sm font-bold font-mono text-persian hover:text-turquoise transition-colors duration-300"
+              style={{
+                filter: "drop-shadow(0 0 0 rgba(51, 230, 191, 0.5))",
+              }}
+            >
+              v{SITE_CONFIG.version}
+            </a>
           </div>
         </div>
 
