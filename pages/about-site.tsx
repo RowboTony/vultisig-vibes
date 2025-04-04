@@ -5,7 +5,7 @@ import GradientDivider from '../components/GradientDivider';
 
 export default function AboutSitePage() {
   return (
-    <main className="prose prose-invert lg:prose-xl max-w-3xl mx-auto px-6 py-16 font-sans">
+    <main className="prose prose-invert lg:prose-xl max-w-3xl mx-auto px-6 pt-4 font-sans">
       {/* Hero section with animated logo */}
       <div className="flex flex-col items-center justify-center py-12 mb-12 border-b border-gray-800">
         <AnimatedVultisigLogo size="large" className="mb-8" />
