@@ -69,9 +69,9 @@ const Hero: React.FC = () => {
                 <LockKeyhole className="text-cyanAccent w-7 h-7" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-cyanAccent mt-1 mb-1 font-bold tracking-normal font-mono">Multi-Chain Support</h3>
+                <h3 className="text-xl font-semibold text-cyanAccent mt-1 mb-1 font-bold tracking-normal font-mono">MPC-Grade Security</h3>
                 <p className="vultisig-paragraph">
-                  Industry-grade security with TSS cryptography across multiple blockchains.
+                  Industry-standard cryptography powered by multi-party computation and TSS.
                 </p>
               </div>
             </div>
