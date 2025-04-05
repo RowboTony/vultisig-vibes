@@ -54,7 +54,7 @@ export default function FeatureGrid() {
               <div className="mr-3">{feature.icon}</div>
               <h3 className="text-xl font-semibold font-mono tracking-tight text-cyanAccent">{feature.title}</h3>
             </div>
-            <p className="text-sm opacity-80 ml-9">{feature.description}</p>
+            <p className="text-base opacity-80 ml-9">{feature.description}</p>
           </div>
         ))}
       </div>
