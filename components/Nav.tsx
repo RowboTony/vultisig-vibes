@@ -43,7 +43,7 @@ const Nav = () => {
       <div className="flex items-center space-x-3 2xl:hidden">
         {/* "Get Vultisig" Button - Visible on screens 374px+ but hidden on 2xl+ */}
         <a
-          href="#cta"
+          href="https://vultisig.com/download"
           className="hidden xs:block border border-turquoise text-turquoise rounded-md px-2 py-1 hover:bg-turquoise hover:text-black transition-colors duration-300 whitespace-nowrap font-mono md:text-[18px] text-[14px]"
         >
           Get Vultisig
