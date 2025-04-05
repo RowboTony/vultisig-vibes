@@ -44,6 +44,8 @@ export default function Layout({ children }) {
 
             <GradientDivider />
             <RespawnRestore />
+            <GradientDivider />
+
             {/* <FinalProofCredibility /> */}
           </>
         ) : (
