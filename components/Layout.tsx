@@ -1,19 +1,14 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Footer from "./Footer";
+import GradientDivider from "./GradientDivider";
 import Header from "./Header";
+import Hero from "./sections/Hero";
+import FeatureGrid from "./FeatureGrid";
+import ProgrammableSovereignty from "./sections/ProgrammableSovereignty";
+import RespawnRestore from "./sections/RespawnRestore";
 import Nav from "./Nav";
 import VultisigLogo from "./VultisigLogo";
-import Footer from "./Footer";
-import Hero from "./sections/Hero";
-import TechnologyExplainer from "./sections/TechnologyExplainer";
-import MultiFactorSovereignty from "./sections/MultiFactorSovereignty";
-import SeedlessSimplicity from "./sections/SeedlessSimplicity";
-import ProgrammableSovereignty from "./sections/ProgrammableSovereignty";
-import VulticonnectIntegration from "./sections/VulticonnectIntegration";
-import FeatureGrid from "./FeatureGrid";
-import RespawnRestore from "./sections/RespawnRestore";
-import FinalProofCredibility from "./sections/FinalProofCredibility";
-import GradientDivider from "./GradientDivider";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -32,21 +27,10 @@ export default function Layout({ children }) {
           <>
             <Hero />
             <FeatureGrid />
-            {/*
-
-            <TechnologyExplainer />
-            <MultiFactorSovereignty />
-            <SeedlessSimplicity />
-            <ProgrammableSovereignty />
-            <VulticonnectIntegration />
-
-            */}
-
             <GradientDivider />
             <RespawnRestore />
             <GradientDivider />
-
-            {/* <FinalProofCredibility /> */}
+            <ProgrammableSovereignty />
           </>
         ) : (
           children
