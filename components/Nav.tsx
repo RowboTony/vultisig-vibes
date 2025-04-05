@@ -32,7 +32,7 @@ const Nav = () => {
           </a>
         ))}
         <a
-          href="https://vultisig.com/downloadl"
+          href="https://vultisig.com/download"
           className="ml-2 border border-turquoise text-turquoise rounded-md px-3 py-1 hover:bg-turquoise hover:text-black transition-colors duration-300 whitespace-nowrap text-[22px]"
         >
           Get Vultisig
