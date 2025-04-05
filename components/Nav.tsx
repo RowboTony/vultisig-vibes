@@ -58,7 +58,7 @@ const Nav = () => {
           <a
             key={item.label}
             href={isHomePage ? item.href : `/${item.href}`}
-            onClick={(e) => !isHomePage && item.href.startsWith('#') ? handleNavClick(e, item.href) : null}
+            onClick={(e) => handleNavClick(e, item.href)}
             className="text-white hover:text-turquoise transition-colors duration-300 whitespace-nowrap text-[22px]"
           >
             {item.label}
@@ -127,7 +127,7 @@ const Nav = () => {
               <a
                 key={item.label}
                 href={isHomePage ? item.href : `/${item.href}`}
-                onClick={(e) => !isHomePage && item.href.startsWith('#') ? handleNavClick(e, item.href) : null}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="block font-mono text-white hover:text-turquoise transition-colors duration-300 text-[22px]"
               >
                 {item.label}
