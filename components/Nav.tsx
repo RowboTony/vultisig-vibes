@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { CircleEllipsis, X } from "lucide-react";
 import VultisigLogo from "./VultisigLogo";
+import { useRouter } from "next/router";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const isHomePage = router.pathname === "/";
 
   // Prevent body scrolling when menu is open
   useEffect(() => {
@@ -29,6 +32,24 @@ const Nav = () => {
     { label: "Download", href: "#download" },
   ];
 
+  // Function to get the correct href based on current page
+  const getNavHref = (href) => {
+    if (isHomePage) {
+      return href;
+    } else {
+      return `/${href}`;
+    }
+  };
+
+  // Handle navigation click
+  const handleNavClick = (e, href) => {
+    if (!isHomePage && href.startsWith('#')) {
+      e.preventDefault();
+      router.push(`/${href}`);
+    }
+    setIsOpen(false);
+  };
+
   return (
     <>
       {/* Desktop Nav Links - Only visible on 2xl screens (1536px+) */}
@@ -36,7 +57,8 @@ const Nav = () => {
         {navItems.filter(item => !item.disabled).map((item) => (
           <a
             key={item.label}
-            href={item.href}
+            href={isHomePage ? item.href : `/${item.href}`}
+            onClick={(e) => !isHomePage && item.href.startsWith('#') ? handleNavClick(e, item.href) : null}
             className="text-white hover:text-turquoise transition-colors duration-300 whitespace-nowrap text-[22px]"
           >
             {item.label}
@@ -71,13 +93,13 @@ const Nav = () => {
 
       {/* Darkened overlay when menu is open - covers entire viewport */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/80 z-30 transition-opacity duration-300"
-          style={{ 
-            position: 'fixed', 
-            top: 0, 
-            left: 0, 
-            right: 0, 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
             bottom: 0,
             height: '100vh',
             width: '100vw'
@@ -104,8 +126,8 @@ const Nav = () => {
             {navItems.filter(item => !item.disabled).map((item) => (
               <a
                 key={item.label}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
+                href={isHomePage ? item.href : `/${item.href}`}
+                onClick={(e) => !isHomePage && item.href.startsWith('#') ? handleNavClick(e, item.href) : null}
                 className="block font-mono text-white hover:text-turquoise transition-colors duration-300 text-[22px]"
               >
                 {item.label}
