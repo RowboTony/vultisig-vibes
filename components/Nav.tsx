@@ -26,7 +26,7 @@ const Nav = () => {
           <a
             key={item.label}
             href={item.href}
-            className="text-cyanAccent hover:text-turquoise transition-colors duration-300 whitespace-nowrap text-[22px]"
+            className="text-white hover:text-turquoise transition-colors duration-300 whitespace-nowrap text-[22px]"
           >
             {item.label}
           </a>
@@ -77,7 +77,7 @@ const Nav = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block font-mono text-cyanAccent hover:text-turquoise transition-colors duration-300 text-[22px]"
+                className="block font-mono text-white hover:text-turquoise transition-colors duration-300 text-[22px]"
               >
                 {item.label}
               </a>
