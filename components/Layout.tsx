@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Footer from "./Footer";
 import GradientDivider from "./GradientDivider";
@@ -13,6 +13,19 @@ import VultisigLogo from "./VultisigLogo";
 export default function Layout({ children }) {
   const router = useRouter();
   const isHomePage = router.pathname === "/";
+  const [scrollY, setScrollY] = useState(0);
+
+  // Handle scroll for fade-in animation
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="bg-[#051937] text-white font-sans min-h-screen flex flex-col">
@@ -40,53 +53,57 @@ export default function Layout({ children }) {
         <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
           {/* Large logo top left */}
           <div
-            className="absolute -top-[10%] -left-[10%] w-[80%] h-[80%]"
+            className="absolute -top-[10%] -left-[10%] w-[80%] h-[80%] transition-opacity duration-1000"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 226 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M108.765 130.379L14.8049 184.765L1 170.961L83.3688 115.613L108.765 130.379Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M110.889 134.058L16.8091 188.237L21.8619 207.094L110.978 163.435L110.889 134.058Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M114.624 134.058L208.703 188.237L203.65 207.094L114.534 163.434L114.624 134.058Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M116.747 130.379L210.707 184.765L224.512 170.96L142.143 115.613L116.747 130.379Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M114.624 126.36L114.504 17.7957L133.362 12.7427L140.11 111.75L114.624 126.36Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M110.376 126.36L110.496 17.7957L91.6381 12.7427L84.8905 111.75L110.376 126.36Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 226 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M108.765 130.379L14.8049 184.765L1 170.961L83.3688 115.613L108.765 130.379Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M110.889 134.058L16.8091 188.237L21.8619 207.094L110.978 163.435L110.889 134.058Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M114.624 134.058L208.703 188.237L203.65 207.094L114.534 163.434L114.624 134.058Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M116.747 130.379L210.707 184.765L224.512 170.96L142.143 115.613L116.747 130.379Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M114.624 126.36L114.504 17.7957L133.362 12.7427L140.11 111.75L114.624 126.36Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M110.376 126.36L110.496 17.7957L91.6381 12.7427L84.8905 111.75L110.376 126.36Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E")`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
               transform: 'rotate(-15deg)',
-              opacity: 0.25
+              opacity: scrollY > 100 ? 0.08 : 0.06,
+              filter: 'blur(1px) saturate(0.8)'
             }}
           />
 
           {/* Large logo bottom right */}
           <div
-            className="absolute -bottom-[10%] -right-[10%] w-[80%] h-[80%]"
+            className="absolute -bottom-[10%] -right-[10%] w-[80%] h-[80%] transition-opacity duration-1000"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 226 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M108.765 130.379L14.8049 184.765L1 170.961L83.3688 115.613L108.765 130.379Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M110.889 134.058L16.8091 188.237L21.8619 207.094L110.978 163.435L110.889 134.058Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M114.624 134.058L208.703 188.237L203.65 207.094L114.534 163.434L114.624 134.058Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M116.747 130.379L210.707 184.765L224.512 170.96L142.143 115.613L116.747 130.379Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M114.624 126.36L114.504 17.7957L133.362 12.7427L140.11 111.75L114.624 126.36Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M110.376 126.36L110.496 17.7957L91.6381 12.7427L84.8905 111.75L110.376 126.36Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 226 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M108.765 130.379L14.8049 184.765L1 170.961L83.3688 115.613L108.765 130.379Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M110.889 134.058L16.8091 188.237L21.8619 207.094L110.978 163.435L110.889 134.058Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M114.624 134.058L208.703 188.237L203.65 207.094L114.534 163.434L114.624 134.058Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M116.747 130.379L210.707 184.765L224.512 170.96L142.143 115.613L116.747 130.379Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M114.624 126.36L114.504 17.7957L133.362 12.7427L140.11 111.75L114.624 126.36Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M110.376 126.36L110.496 17.7957L91.6381 12.7427L84.8905 111.75L110.376 126.36Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E")`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
               transform: 'rotate(15deg)',
-              opacity: 0.25
+              opacity: scrollY > 300 ? 0.08 : 0.06,
+              filter: 'blur(1px) saturate(0.8)'
             }}
           />
 
           {/* Medium logo center right */}
           <div
-            className="absolute top-[30%] -right-[5%] w-[40%] h-[40%]"
+            className="absolute top-[30%] -right-[5%] w-[40%] h-[40%] transition-opacity duration-1000"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 226 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M108.765 130.379L14.8049 184.765L1 170.961L83.3688 115.613L108.765 130.379Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M110.889 134.058L16.8091 188.237L21.8619 207.094L110.978 163.435L110.889 134.058Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M114.624 134.058L208.703 188.237L203.65 207.094L114.534 163.434L114.624 134.058Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M116.747 130.379L210.707 184.765L224.512 170.96L142.143 115.613L116.747 130.379Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M114.624 126.36L114.504 17.7957L133.362 12.7427L140.11 111.75L114.624 126.36Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M110.376 126.36L110.496 17.7957L91.6381 12.7427L84.8905 111.75L110.376 126.36Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 226 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M108.765 130.379L14.8049 184.765L1 170.961L83.3688 115.613L108.765 130.379Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M110.889 134.058L16.8091 188.237L21.8619 207.094L110.978 163.435L110.889 134.058Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M114.624 134.058L208.703 188.237L203.65 207.094L114.534 163.434L114.624 134.058Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M116.747 130.379L210.707 184.765L224.512 170.96L142.143 115.613L116.747 130.379Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M114.624 126.36L114.504 17.7957L133.362 12.7427L140.11 111.75L114.624 126.36Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M110.376 126.36L110.496 17.7957L91.6381 12.7427L84.8905 111.75L110.376 126.36Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E")`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
               transform: 'rotate(45deg)',
-              opacity: 0.2
+              opacity: scrollY > 200 ? 0.07 : 0.05,
+              filter: 'blur(1px) saturate(0.8)'
             }}
           />
 
           {/* Medium logo center left */}
           <div
-            className="absolute top-[60%] -left-[5%] w-[40%] h-[40%]"
+            className="absolute top-[60%] -left-[5%] w-[40%] h-[40%] transition-opacity duration-1000"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 226 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M108.765 130.379L14.8049 184.765L1 170.961L83.3688 115.613L108.765 130.379Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M110.889 134.058L16.8091 188.237L21.8619 207.094L110.978 163.435L110.889 134.058Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M114.624 134.058L208.703 188.237L203.65 207.094L114.534 163.434L114.624 134.058Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M116.747 130.379L210.707 184.765L224.512 170.96L142.143 115.613L116.747 130.379Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M114.624 126.36L114.504 17.7957L133.362 12.7427L140.11 111.75L114.624 126.36Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M110.376 126.36L110.496 17.7957L91.6381 12.7427L84.8905 111.75L110.376 126.36Z' stroke='%2333E6BF' stroke-width='3' stroke-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 226 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M108.765 130.379L14.8049 184.765L1 170.961L83.3688 115.613L108.765 130.379Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M110.889 134.058L16.8091 188.237L21.8619 207.094L110.978 163.435L110.889 134.058Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M114.624 134.058L208.703 188.237L203.65 207.094L114.534 163.434L114.624 134.058Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M116.747 130.379L210.707 184.765L224.512 170.96L142.143 115.613L116.747 130.379Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M114.624 126.36L114.504 17.7957L133.362 12.7427L140.11 111.75L114.624 126.36Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3Cpath d='M110.376 126.36L110.496 17.7957L91.6381 12.7427L84.8905 111.75L110.376 126.36Z' stroke='%2333E6BF' stroke-width='2' stroke-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E")`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
               transform: 'rotate(-45deg)',
-              opacity: 0.2
+              opacity: scrollY > 400 ? 0.07 : 0.05,
+              filter: 'blur(1px) saturate(0.8)'
             }}
           />
         </div>

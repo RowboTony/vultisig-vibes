@@ -228,8 +228,9 @@ export default function AboutSitePage() {
         </Link>
       </div>
 
-      <p className="pt-10 text-sm text-gray-500 italic border-t border-gray-800">
-        I'm happiest when I'm Vultisiging on a Friday night. Just a cowboy coder who loves Vultisig.
+      <p className="pt-10 pb-10 text-sm text-gray-500 italic border-t border-gray-800">
+        I'm happiest when I'm Vultisiging on a Friday night.
+        <br />Just a cowboy coder who loves Vultisig.
       </p>
     </main>
   );

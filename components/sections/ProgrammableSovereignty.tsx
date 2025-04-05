@@ -26,9 +26,9 @@ const features = [
 
 export default function ProgrammableSovereignty() {
   return (
-    <section id="programmability" className="bg-secondary py-16 px-4 relative">
-      {/* Radial spotlight specific to this section */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.05)_0%,_transparent_60%)] pointer-events-none"></div>
+    <section id="programmability" className="py-16 px-4 relative">
+      {/* Radial spotlight specific to this section - more subtle */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_60%)] pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header with Gradient Text */}
@@ -45,14 +45,20 @@ export default function ProgrammableSovereignty() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-[1px] rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 group"
+              className="p-[1px] rounded-2xl bg-gradient-to-r from-cyan-500/30 to-blue-600/30 group"
             >
-              <div className="bg-[#0a122a]/80 backdrop-blur-sm p-6 rounded-2xl h-full transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20">
+              <div className="bg-[#0a122a]/40 backdrop-blur-sm p-6 rounded-2xl h-full transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20">
                 <div className="flex items-center mb-3">
-                  <div className="mr-3">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold font-mono tracking-tight text-cyanAccent">{feature.name}</h3>
+                  <div className="mr-3 flex-shrink-0">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-mono tracking-tight text-cyanAccent">
+                    {feature.name}
+                  </h3>
                 </div>
-                <p className="text-base opacity-80 ml-9">{feature.description}</p>
+                <p className="text-gray-300 ml-10">
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}
