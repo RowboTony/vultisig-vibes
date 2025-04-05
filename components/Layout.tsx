@@ -111,6 +111,7 @@ export default function Layout({ children }) {
         {isHomePage ? (
           <>
             <Hero />
+            <GradientDivider />
             <FeatureGrid />
             <GradientDivider />
             <RespawnRestore />
