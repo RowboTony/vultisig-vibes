@@ -12,6 +12,7 @@
     "@fontsource/inter": "^5.2.5",
     "@fontsource/jetbrains-mono": "^5.2.5",
     "@fontsource/plus-jakarta-sans": "^5.2.5",
+    "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.6.3",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.486.0",
