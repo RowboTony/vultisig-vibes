@@ -8,11 +8,11 @@ const Nav = () => {
   // ✅ Shortened navigation labels for clarity
   const navItems = [
     { label: "Vault", href: "#vault" },
-    { label: "Technology", href: "#technology" },
+    { label: "Technology", href: "#features" },
     { label: "How It Works", href: "#how" },
     { label: "Features", href: "#features" },
     { label: "DeFi Access", href: "#defi" },
-    { label: "Recovery", href: "#recovery" },
+    { label: "Recovery", href: "#respawn-restore" },
     { label: "Programmable", href: "#programmability" },
     { label: "Trust", href: "#trust" },
     { label: "Download", href: "#download" },
@@ -32,7 +32,7 @@ const Nav = () => {
           </a>
         ))}
         <a
-          href="#cta"
+          href="https://vultisig.com/downloadl"
           className="ml-2 border border-turquoise text-turquoise rounded-md px-3 py-1 hover:bg-turquoise hover:text-black transition-colors duration-300 whitespace-nowrap text-[22px]"
         >
           Get Vultisig
@@ -83,7 +83,7 @@ const Nav = () => {
               </a>
             ))}
             <a
-              href="#cta"
+              href="https://vultisig.com/download"
               onClick={() => setIsOpen(false)}
               className="block border border-turquoise text-turquoise rounded-md px-3 py-2 text-center mt-6 font-mono hover:bg-turquoise hover:text-black transition-colors duration-300 text-[22px]"
             >
