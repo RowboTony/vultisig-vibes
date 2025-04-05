@@ -8,10 +8,10 @@ const Nav = () => {
   // ✅ Shortened navigation labels for clarity
   const navItems = [
     { label: "Vault", href: "#vault" },
-    { label: "Tech", href: "#technology" },
+    { label: "Technology", href: "#technology" },
     { label: "How It Works", href: "#how" },
     { label: "Features", href: "#features" },
-    { label: "DeFi", href: "#defi" },
+    { label: "DeFi Access", href: "#defi" },
     { label: "Recovery", href: "#recovery" },
     { label: "Programmable", href: "#programmability" },
     { label: "Trust", href: "#trust" },
@@ -19,47 +19,48 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-40 bg-[#0a1121] bg-opacity-90 text-white shadow-md">
-      {/* 🖥 Desktop Nav */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <VultisigLogo />
-        </div>
-        <div className="hidden md:flex space-x-6 text-sm font-mono tracking-wide">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-persian hover:text-turquoise transition-colors duration-300"
-            >
-              {item.label}
-            </a>
-          ))}
+    <>
+      {/* Desktop Nav Links - Only visible on 2xl screens (1536px+) */}
+      <div className="hidden 2xl:flex space-x-6 font-mono tracking-wide">
+        {navItems.map((item) => (
           <a
-            href="#cta"
-            className="ml-2 border border-turquoise text-turquoise rounded-md px-3 py-1 hover:bg-turquoise hover:text-black transition-colors duration-300"
+            key={item.label}
+            href={item.href}
+            className="text-persian hover:text-turquoise transition-colors duration-300 whitespace-nowrap text-[22px]"
           >
-            Get Vultisig
+            {item.label}
           </a>
-        </div>
-
-        {/* 📱 Mobile Menu Button */}
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(true)} aria-label="Open Menu">
-            <CircleEllipsis
-              className="w-8 h-8 text-persian hover:text-turquoise transition-colors duration-300"
-              strokeWidth={2.5}
-              style={{
-                filter: "drop-shadow(0 0 4px rgba(51, 230, 191, 0.5))",
-              }}
-            />
-          </button>
-        </div>
+        ))}
+        <a
+          href="#cta"
+          className="ml-2 border border-turquoise text-turquoise rounded-md px-3 py-1 hover:bg-turquoise hover:text-black transition-colors duration-300 whitespace-nowrap text-[22px]"
+        >
+          Get Vultisig
+        </a>
       </div>
 
-      {/* 📱 Slide-Out Mobile Nav */}
+      {/* Mobile/Tablet Navigation Controls */}
+      <div className="flex items-center space-x-3 2xl:hidden">
+        {/* "Get Vultisig" Button - Visible on screens 425px+ but hidden on 2xl+ */}
+        <a
+          href="#cta"
+          className="hidden sm:block border border-turquoise text-turquoise rounded-md px-3 py-1 hover:bg-turquoise hover:text-black transition-colors duration-300 whitespace-nowrap text-[18px] font-mono"
+        >
+          Get Vultisig
+        </a>
+
+        {/* 📱 Mobile Menu Button - Always visible on screens below 1536px */}
+        <button onClick={() => setIsOpen(true)} aria-label="Open Menu">
+          <CircleEllipsis
+            className="w-8 h-8 text-persian hover:text-turquoise transition-colors duration-300"
+            strokeWidth={1}
+          />
+        </button>
+      </div>
+
+      {/* 📱 Slide-Out Mobile Nav - Now positioned relative to viewport */}
       {isOpen && (
-        <div className="fixed top-0 right-0 z-50 w-64 h-full bg-[#061B3A] p-6 shadow-lg transition-all">
+        <div className="fixed top-0 right-0 z-50 w-64 h-screen bg-[#061B3A] p-6 shadow-lg transition-all overflow-y-auto">
           <button
             onClick={() => setIsOpen(false)}
             className="absolute top-4 right-4 text-white hover:text-turquoise transition-colors duration-300"
@@ -76,7 +77,7 @@ const Nav = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block font-mono text-persian hover:text-turquoise transition-colors duration-300"
+                className="block font-mono text-persian hover:text-turquoise transition-colors duration-300 text-[22px]"
               >
                 {item.label}
               </a>
@@ -84,14 +85,14 @@ const Nav = () => {
             <a
               href="#cta"
               onClick={() => setIsOpen(false)}
-              className="block border border-turquoise text-turquoise rounded-md px-3 py-2 text-center mt-6 font-mono hover:bg-turquoise hover:text-black transition-colors duration-300"
+              className="block border border-turquoise text-turquoise rounded-md px-3 py-2 text-center mt-6 font-mono hover:bg-turquoise hover:text-black transition-colors duration-300 text-[22px]"
             >
               Get Vultisig
             </a>
           </nav>
         </div>
       )}
-    </nav>
+    </>
   );
 };
 
