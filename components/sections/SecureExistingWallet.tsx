@@ -3,22 +3,20 @@ import React from "react";
 export default function SecureExistingWallet() {
   // Static list of BIP-39 words from across the alphabet
   const displayWords = [
-    "abandon", "bridge", "camera", "demand", "earth",
-    "famous", "galaxy", "harbor", "invest", "jungle", "kitchen"
+     "vultisig", "protects ", "your", "assets", "trust",
+      "yourself", "hold", "your", "keys ", "acel ", "anon"
   ];
 
   return (
-    <section id="secure-existing-wallet" className="px-4 py-16 relative overflow-hidden">
+    <section id="secure-existing-wallet" className="px-4 py-3 relative overflow-hidden">
       {/* Background gradient effect - subtle */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_70%)] pointer-events-none"></div>
 
-      <div className="w-full max-w-6xl mx-auto mb-12">
-        <h2 className="font-mono font-extrabold tracking-tight leading-[0.95] uppercase text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 text-cyanAccent">
-            Secure Your<br className="block sm:hidden" /> Existing Wallet
-          </span>
-        </h2>
-      </div>
+      <h2 className="mb-8 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center">
+        <span className="text-transparent bg-clip-text bg-text-gradient">
+          Secure Your<br className="block lg:hidden" /> Existing Wallet
+        </span>
+      </h2>
 
       <div className="vultisig-container mx-auto relative z-10">
         {/* Glass card container */}
