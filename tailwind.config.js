@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '374px',
+      },
       colors: {
         oxford: '#061B3A',
         persian: '#2155DF',

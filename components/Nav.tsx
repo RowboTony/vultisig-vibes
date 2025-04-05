@@ -41,10 +41,10 @@ const Nav = () => {
 
       {/* Mobile/Tablet Navigation Controls */}
       <div className="flex items-center space-x-3 2xl:hidden">
-        {/* "Get Vultisig" Button - Visible on screens 425px+ but hidden on 2xl+ */}
+        {/* "Get Vultisig" Button - Visible on screens 374px+ but hidden on 2xl+ */}
         <a
           href="#cta"
-          className="hidden sm:block border border-turquoise text-turquoise rounded-md px-3 py-1 hover:bg-turquoise hover:text-black transition-colors duration-300 whitespace-nowrap text-[18px] font-mono"
+          className="hidden xs:block border border-turquoise text-turquoise rounded-md px-2 py-1 hover:bg-turquoise hover:text-black transition-colors duration-300 whitespace-nowrap font-mono md:text-[18px] text-[14px]"
         >
           Get Vultisig
         </a>
