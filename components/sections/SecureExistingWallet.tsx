@@ -14,7 +14,9 @@ export default function SecureExistingWallet() {
 
       <div className="w-full max-w-6xl mx-auto mb-12">
         <h2 className="font-mono font-extrabold tracking-tight leading-[0.95] uppercase text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 text-cyanAccent">Secure Your Existing Wallet</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 text-cyanAccent">
+            Secure Your<br className="block sm:hidden" /> Existing Wallet
+          </span>
         </h2>
       </div>
 
@@ -29,8 +31,17 @@ export default function SecureExistingWallet() {
             {/* Seed Phrase Mock Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-8">
               {[...Array(12)].map((_, index) => (
-                <div key={index} className="rounded-md border border-white/20 bg-white/5 px-4 py-2 text-sm font-mono text-white/70 text-left relative">
-                  <span className="text-white/40 absolute top-2 left-2">{index + 1}</span>
+                <div
+                  key={index}
+                  className={`rounded-md border px-4 py-2 text-sm font-mono text-left relative ${
+                    index === 11
+                      ? "border-cyan-400/50 bg-cyan-400/5 shadow-[0_0_15px_rgba(0,224,255,0.15)] text-cyan-300"
+                      : "border-white/20 bg-white/5 text-white/70"
+                  }`}
+                >
+                  <span className={`absolute top-2 left-2 ${index === 11 ? "text-cyan-400/70" : "text-white/40"}`}>
+                    {index + 1}
+                  </span>
                   <span className="ml-4">
                     {index < 11 ? displayWords[index] : "..."}
                   </span>
