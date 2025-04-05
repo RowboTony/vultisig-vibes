@@ -64,7 +64,7 @@ export default function ProgrammableSovereignty() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-7 text-center">
           <p className="text-lg italic text-gray-300">
             This is programmable custody. Already live. Quietly powerful.
           </p>
