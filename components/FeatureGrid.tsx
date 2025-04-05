@@ -54,7 +54,7 @@ export default function FeatureGrid() {
         </h2>
 
         <p className="vultisig-subheading max-w-3xl mx-auto text-center mb-12">
-          Vultisig combines the security of multi-party computation with the simplicity of modern UX design.
+          Vultisig is cross-chain native. It combines the security of multi-party computation with the simplicity of modern UX design.
         </p>
 
         {/* Feature Grid */}
