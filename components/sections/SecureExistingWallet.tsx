@@ -1,28 +1,46 @@
 import React from "react";
 
 export default function SecureExistingWallet() {
+  // Static list of BIP-39 words from across the alphabet
+  const displayWords = [
+    "abandon", "bridge", "camera", "demand", "earth",
+    "famous", "galaxy", "harbor", "invest", "jungle", "kitchen"
+  ];
+
   return (
-    <section id="secure-existing-wallet" className="px-4 py-2 relative overflow-hidden">
+    <section id="secure-existing-wallet" className="px-4 py-16 relative overflow-hidden">
       {/* Background gradient effect - subtle */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_70%)] pointer-events-none"></div>
 
-      <div className="vultisig-container max-w-4xl mx-auto relative z-10">
-        <h2 className="mb-8 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl text-center">
-          <span className="text-transparent bg-clip-text bg-text-gradient font-mono text-cyanAccent">Secure Your Existing Wallet</span>
+      <div className="w-full max-w-6xl mx-auto mb-12">
+        <h2 className="font-mono font-extrabold tracking-tight leading-[0.95] uppercase text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 text-cyanAccent">Secure Your Existing Wallet</span>
         </h2>
+      </div>
 
+      <div className="vultisig-container mx-auto relative z-10">
         {/* Glass card container */}
-        <div className="p-[1px] rounded-2xl bg-gradient-to-r from-cyan-500/30 to-blue-600/30 backdrop-blur-sm">
-          <div className="bg-[#0a122a]/40 backdrop-blur-sm p-8 rounded-2xl">
-            <div className="space-y-6">
-              <p className="vultisig-paragraph text-center text-lg">
-                Import your legacy seed phrase and convert it into a secure multi-device vault.
-              </p>
+        <div className="backdrop-blur-md bg-white/5 rounded-xl p-6 shadow-md max-w-xl mx-auto">
+          <div className="space-y-6">
+            <p className="text-lg md:text-xl text-white/90 text-center">
+              Import your legacy seed phrase and convert it into a secure multi-device vault.
+            </p>
 
-              <p className="vultisig-paragraph text-center text-sm text-gray-400 mt-6">
-                Same wallet, new security layer. No need to move funds.
-              </p>
+            {/* Seed Phrase Mock Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-8">
+              {[...Array(12)].map((_, index) => (
+                <div key={index} className="rounded-md border border-white/20 bg-white/5 px-4 py-2 text-sm font-mono text-white/70 text-left relative">
+                  <span className="text-white/40 absolute top-2 left-2">{index + 1}</span>
+                  <span className="ml-4">
+                    {index < 11 ? displayWords[index] : "..."}
+                  </span>
+                </div>
+              ))}
             </div>
+
+            <p className="text-sm text-white/60 text-center mt-6">
+              Same wallet, new security layer. No need to move funds.
+            </p>
           </div>
         </div>
       </div>
