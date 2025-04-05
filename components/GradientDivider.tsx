@@ -6,7 +6,7 @@ interface GradientDividerProps {
 
 const GradientDivider: React.FC<GradientDividerProps> = ({ className = '' }) => {
   return (
-    <div className={`w-full py-12 ${className}`}>
+    <div className={`w-full py-6 ${className}`}>
       <div className="relative max-w-5xl mx-auto px-6">
         {/* Main gradient line */}
         <div className="h-px bg-gradient-to-r from-transparent via-cyanAccent/70 to-transparent"></div>
