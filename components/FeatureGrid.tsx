@@ -43,7 +43,7 @@ export default function FeatureGrid() {
   ];
 
   return (
-    <section id="features" className="py-6 px-4 relative">
+    <section id="core-features" className="py-6 px-4 relative">
       {/* Radial spotlight specific to this section - more subtle */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_60%)] pointer-events-none"></div>
 

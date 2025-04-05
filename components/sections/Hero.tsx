@@ -6,7 +6,7 @@ import GradientHeadline from "../GradientHeadline";
 
 const Hero: React.FC = () => {
   return (
-    <section className="pt-7 pb-6 relative overflow-hidden">
+    <section id="vault" className="pt-7 pb-6 relative overflow-hidden">
       {/* Enhanced background gradient effect - more subtle */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_70%)] pointer-events-none"></div>
 
@@ -145,7 +145,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* CTA button */}
-          <div className="text-center">
+          <div id="download" className="text-center">
             <a
               href="https://vultisig.com/download"
               className="inline-block border border-turquoise text-turquoise rounded-md px-5 py-3 hover:bg-turquoise hover:text-black transition-colors duration-300 text-[22px] font-mono"

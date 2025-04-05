@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 
 export default function RespawnRestore() {
   return (
-    <section id="respawn-restore" className="px-4 py-0 relative overflow-hidden">
+    <section id="respawn" className="px-4 py-0 relative overflow-hidden">
       {/* Enhanced background gradient effect - more subtle */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_70%)] pointer-events-none"></div>
 

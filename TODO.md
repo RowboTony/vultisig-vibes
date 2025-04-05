@@ -16,6 +16,7 @@
 - Add animations (fade-in, scroll-triggered pop).
 - Tooltips like “Every swap signed. Twice. Twice.” in DeFi block.
 - Light/dark mode toggle
+- make the seed phrase 'acel' box glow, not just the link
 - console.log easter egg
 
 ## Usability / Accessibility
