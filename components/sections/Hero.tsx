@@ -11,34 +11,53 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_70%)] pointer-events-none"></div>
 
       <div className="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-10 relative z-10">
-        {/* Content wrapper with proper centering */}
+        {/* Two-column layout for viewports above 425px */}
         <div className="max-w-[1000px] mx-auto">
-          {/* Headline */}
-          <div className="text-center md:text-left">
-            <h2 className="mb-6 max-w-4xl mx-auto md:mx-0 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl">
-              <div className="flex flex-col md:block">
-                <div className="mb-[-0.075em]">
-                  <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Seedless.</span>
-                  <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Seedless</span>
-                </div>
-                <div className="mb-[-0.075em]">
-                  <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Sovereign.</span>
-                  <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Sovereign</span>
-                </div>
-                <div>
-                  <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Secure.</span>
-                  <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Secure</span>
-                </div>
-              </div>
-            </h2>
+          <div className="flex flex-col min-[426px]:flex-row min-[426px]:items-center min-[426px]:gap-8">
+            {/* Left column: Headline and text */}
+            <div className="min-[426px]:w-1/2">
+              {/* Headline */}
+              <div className="text-center min-[426px]:text-left">
+                <h2 className="mb-6 max-w-4xl mx-auto min-[426px]:mx-0 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl">
+                  <div className="flex flex-col md:block">
+                    <div className="mb-[-0.075em]">
+                      <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Seedless.</span>
+                      <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Seedless</span>
+                    </div>
+                    <div className="mb-[-0.075em]">
+                      <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Sovereign.</span>
+                      <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Sovereign</span>
+                    </div>
+                    <div>
+                      <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Secure.</span>
+                      <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Secure</span>
+                    </div>
+                  </div>
+                </h2>
 
-            <p className="vultisig-subheading max-w-2xl mx-auto md:mx-0 mb-8">
-              The next generation of self-custody that eliminates seed phrases while enhancing security and control.
-            </p>
+                <p className="vultisig-subheading max-w-2xl mx-auto min-[426px]:mx-0 mb-2">
+                  The next generation of self-custody that eliminates seed phrases while enhancing security and control.
+                </p>
+              </div>
+            </div>
+
+            {/* Right column: Image (visible only on larger screens) */}
+            <div className="hidden min-[426px]:flex min-[426px]:w-1/2 items-center">
+              <div className="relative max-w-[450px]">
+                <Image
+                  src="/images/security.png"
+                  alt="Vultisig App Screenshot"
+                  width={500}
+                  height={500}
+                  className="w-auto max-h-[380px] object-contain"
+                  priority
+                />
+              </div>
+            </div>
           </div>
 
           {/* Enhanced Bullet List with glass-style cards - more transparent */}
-          <div className="space-y-6 max-w-3xl mx-auto md:mx-0 mt-8">
+          <div className="space-y-6 max-w-3xl mx-auto min-[426px]:mx-0 mt-8">
             <div className="p-[1px] rounded-2xl bg-gradient-to-r from-cyan-500/30 to-blue-600/30 group" data-bullet="seedless">
               <div className="bg-[#0a122a]/40 backdrop-blur-sm p-5 rounded-2xl transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20">
                 <div className="flex items-start gap-2">
@@ -88,15 +107,21 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="mt-10 relative">
-            <div className="absolute inset-0"></div>
+          {/* Final callout text */}
+          <div className="mt-8 text-center">
+            <p className="text-white/80 font-mono text-lg animate-fadeIn">
+              Your devices are your multi-factor authorization. Trust yourself.
+            </p>
+          </div>
+
+          {/* Hero Image (visible only on mobile) */}
+          <div className="mt-10 relative block min-[426px]:hidden">
             <Image
               src="/images/security.png"
               alt="Vultisig App Screenshot"
               width={500}
               height={500}
-              className="mx-auto"
+              className="mx-auto w-full h-auto object-contain"
             />
           </div>
 

@@ -11,10 +11,12 @@
 - Footer version: site pulse
 - Check about-site typography on all viewport sizes
 
-## Optional
+## Optional / Extra Credit
 - Add animations (fade-in, scroll-triggered pop).
 - Tooltips like “Every swap signed. Twice. Twice.” in DeFi block.
+- Light/dark mode toggle
 - console.log easter egg
 
-## Usability
-- Improve Nav fonts on huge screens above 2560: the Nav goes full screen and looks cluttered, increase the font size or appreciably increase the entire header height
+## Usability / Accessibility
+- QA test for screen readers and keyboard navigation
+- Improve Nav fonts on huge screens above 2560: the Nav goes full screen and looks cluttered, increase the font size or appreciably increase the entire header height.
