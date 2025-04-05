@@ -41,13 +41,24 @@ export default function SecureExistingWallet() {
                     {index + 1}
                   </span>
                   <span className="ml-4">
-                    {index < 11 ? displayWords[index] : "..."}
+                    {index === 9 ? (
+                      <a
+                        href="https://www.acel.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/70 hover:text-cyan-300 transition-colors duration-200"
+                      >
+                        {displayWords[index]}
+                      </a>
+                    ) : (
+                      index < 11 ? displayWords[index] : "..."
+                    )}
                   </span>
                 </div>
               ))}
             </div>
 
-            <p className="text-sm text-white/60 text-center mt-6">
+            <p className="text-base text-white/60 text-center mt-6">
               Same wallet, new security layer. No need to move funds.
             </p>
           </div>
