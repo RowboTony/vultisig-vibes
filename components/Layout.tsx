@@ -7,6 +7,7 @@ import Hero from "./sections/Hero";
 import FeatureGrid from "./FeatureGrid";
 import ProgrammableSovereignty from "./sections/ProgrammableSovereignty";
 import RespawnRestore from "./sections/RespawnRestore";
+import SecureExistingWallet from "./sections/SecureExistingWallet";
 import Nav from "./Nav";
 import VultisigLogo from "./VultisigLogo";
 
@@ -115,6 +116,8 @@ export default function Layout({ children }) {
             <FeatureGrid />
             <GradientDivider />
             <RespawnRestore />
+            <GradientDivider />
+            <SecureExistingWallet />
             <GradientDivider />
             <ProgrammableSovereignty />
           </>
