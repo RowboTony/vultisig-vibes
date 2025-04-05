@@ -6,7 +6,7 @@ import GradientHeadline from "../GradientHeadline";
 
 const Hero: React.FC = () => {
   return (
-    <section className="pt-7 pb-2 relative overflow-hidden">
+    <section className="pt-7 pb-16 relative overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-radial from-blueAccent/10 to-transparent opacity-40 pointer-events-none"></div>
 
@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
           <div className="mt-12 text-center">
             <a
               href="https://vultisig.com/download"
-              className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-blueAccent to-cyanAccent text-white text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
+              className="inline-block border border-turquoise text-turquoise rounded-md px-5 py-3 hover:bg-turquoise hover:text-black transition-colors duration-300 text-[22px] font-mono"
             >
               Download Vultisig
             </a>
