@@ -8,7 +8,7 @@ export default function SecureExistingWallet() {
   ];
 
   return (
-    <section id="secure-existing-wallet" className="px-4 py-3 relative overflow-hidden">
+    <section id="secure-wallet" className="px-4 py-3 relative overflow-hidden">
       {/* Background gradient effect - subtle */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_70%)] pointer-events-none"></div>
 

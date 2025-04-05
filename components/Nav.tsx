@@ -20,13 +20,12 @@ const Nav = () => {
   // Shortened navigation labels for clarity
   const navItems = [
     { label: "Vault", href: "#vault" },
-    { label: "Technology", href: "#features" },
-    { label: "How It Works", href: "#how" },
-    { label: "Features", href: "#features" },
-    { label: "DeFi Access", href: "#defi" },
-    { label: "Recovery", href: "#respawn-restore" },
-    { label: "Programmable", href: "#programmability" },
-    { label: "Trust", href: "#trust" },
+    { label: "Technology", href: "#core-features" },
+    { label: "How It Works", href: "#secure-wallet" },
+    { label: "Features", href: "#programmable" },
+    { label: "DeFi Access", href: "#defi", disabled: true },
+    { label: "Recovery", href: "#respawn" },
+    { label: "Trust", href: "#trust", disabled: true },
     { label: "Download", href: "#download" },
   ];
 
@@ -34,7 +33,7 @@ const Nav = () => {
     <>
       {/* Desktop Nav Links - Only visible on 2xl screens (1536px+) */}
       <div className="hidden 2xl:flex space-x-6 font-mono tracking-wide">
-        {navItems.map((item) => (
+        {navItems.filter(item => !item.disabled).map((item) => (
           <a
             key={item.label}
             href={item.href}
@@ -102,7 +101,7 @@ const Nav = () => {
             </button>
           </div>
           <nav className="space-y-4 text-white mt-8">
-            {navItems.map((item) => (
+            {navItems.filter(item => !item.disabled).map((item) => (
               <a
                 key={item.label}
                 href={item.href}

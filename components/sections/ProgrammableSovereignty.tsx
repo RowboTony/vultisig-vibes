@@ -26,7 +26,7 @@ const features = [
 
 export default function ProgrammableSovereignty() {
   return (
-    <section id="programmability" className="py-2 px-4 relative">
+    <section id="programmable" className="py-2 px-4 relative">
       {/* Radial spotlight specific to this section - more subtle */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_60%)] pointer-events-none"></div>
 
