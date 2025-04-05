@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CircleEllipsis, X } from "lucide-react";
 import VultisigLogo from "./VultisigLogo";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // ✅ Shortened navigation labels for clarity
+  // Prevent body scrolling when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  // Shortened navigation labels for clarity
   const navItems = [
     { label: "Vault", href: "#vault" },
     { label: "Technology", href: "#features" },
@@ -49,7 +61,7 @@ const Nav = () => {
           Get Vultisig
         </a>
 
-        {/* 📱 Mobile Menu Button - Always visible on screens below 1536px */}
+        {/* Mobile Menu Button - Always visible on screens below 1536px */}
         <button onClick={() => setIsOpen(true)} aria-label="Open Menu">
           <CircleEllipsis
             className="w-8 h-8 text-persian hover:text-turquoise transition-colors duration-300"
@@ -58,20 +70,38 @@ const Nav = () => {
         </button>
       </div>
 
-      {/* 📱 Slide-Out Mobile Nav - Now positioned relative to viewport */}
+      {/* Darkened overlay when menu is open - covers entire viewport */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/80 z-30 transition-opacity duration-300"
+          style={{ 
+            position: 'fixed', 
+            top: 0, 
+            left: 0, 
+            right: 0, 
+            bottom: 0,
+            height: '100vh',
+            width: '100vw'
+          }}
+          onClick={() => setIsOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Slide-Out Mobile Nav - Now positioned relative to viewport */}
       {isOpen && (
         <div className="fixed top-0 right-0 z-50 w-64 h-screen bg-[#061B3A] p-6 shadow-lg transition-all overflow-y-auto">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white hover:text-turquoise transition-colors duration-300"
-            aria-label="Close Menu"
-          >
-            <X className="w-6 h-6" />
-          </button>
-          <div className="mt-12 mb-6">
+          <div className="flex items-center justify-between">
             <VultisigLogo />
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-white hover:text-turquoise transition-colors duration-300"
+              aria-label="Close Menu"
+            >
+              <X className="w-6 h-6" />
+            </button>
           </div>
-          <nav className="space-y-4 text-white">
+          <nav className="space-y-4 text-white mt-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
