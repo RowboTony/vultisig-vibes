@@ -12,6 +12,7 @@
 - Check about-site typography on all viewport sizes
 
 ## Optional / Extra Credit
+- Animate "Respawnable"
 - Add animations (fade-in, scroll-triggered pop).
 - Tooltips like “Every swap signed. Twice. Twice.” in DeFi block.
 - Light/dark mode toggle
