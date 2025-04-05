@@ -21,3 +21,6 @@
 ## Usability / Accessibility
 - QA test for screen readers and keyboard navigation
 - Improve Nav fonts on huge screens above 2560: the Nav goes full screen and looks cluttered, increase the font size or appreciably increase the entire header height.
+
+## Maintenance / Chore
+- Remove all builder.io cruft

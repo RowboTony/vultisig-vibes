@@ -1,29 +1,26 @@
-import { BuilderComponent, builder } from '@builder.io/react'
+import Head from 'next/head'
+import Layout from '../components/Layout'
+import Hero from '../components/sections/Hero'
 import FeatureGrid from '../components/FeatureGrid'
+import RespawnRestore from '../components/sections/RespawnRestore'
+import SecureExistingWallet from '../components/sections/SecureExistingWallet'
+import ProgrammableSovereignty from '../components/sections/ProgrammableSovereignty'
 
-builder.init('ba252d5412c242bca4d6218689ca1df4')
-
-export async function getStaticProps() {
-  const content = await builder.get('page', { url: '/' }).toPromise()
-  return {
-    props: {
-      content: content || null,
-    },
-    revalidate: 5,
-  }
-}
-
-export default function Home({ content }) {
+export default function Home() {
   return (
     <>
-      {content ? (
-        <BuilderComponent model="page" content={content} />
-      ) : (
-        <>
-          <HeroSection /> {/* Add the HeroSection component */}
-          <FeatureGrid />
-        </>
-      )}
+      <Head>
+        <title>Vultisig | Seedless. Sovereign. Secure.</title>
+        <meta name="description" content="Vultisig is a next-gen seedless wallet powered by TSS cryptography. Secure your assets with sovereign control and modern UX." />
+      </Head>
+      <Layout>
+        <Hero />
+        <FeatureGrid />
+        <RespawnRestore />
+        <SecureExistingWallet />
+        <ProgrammableSovereignty />
+        {/* Add other sections here as you build them */}
+      </Layout>
     </>
   )
 }

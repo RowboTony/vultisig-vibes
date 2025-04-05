@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Vultisig Vibes 🚀</title>
         <link rel="icon" href="/images/favicon.ico" />
         <link rel="shortcut icon" href="images/favicon.ico" />
       </Head>
