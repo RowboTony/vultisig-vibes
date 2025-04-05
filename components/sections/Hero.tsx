@@ -6,44 +6,39 @@ import GradientHeadline from "../GradientHeadline";
 
 const Hero: React.FC = () => {
   return (
-    <section className="pt-7 pb-16 relative overflow-hidden">
+    <section className="pt-7 pb-6 relative overflow-hidden">
       {/* Enhanced background gradient effect - more subtle */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,224,255,0.03)_0%,_transparent_70%)] pointer-events-none"></div>
 
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-10 relative z-10">
-        {/* Two-column layout for viewports above 425px */}
-        <div className="max-w-[1000px] mx-auto">
-          <div className="flex flex-col min-[426px]:flex-row min-[426px]:items-center min-[426px]:gap-8">
-            {/* Left column: Headline and text */}
-            <div className="min-[426px]:w-1/2">
-              {/* Headline */}
-              <div className="text-center min-[426px]:text-left">
-                <h2 className="mb-6 max-w-4xl mx-auto min-[426px]:mx-0 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl">
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Main content container with consistent max-width */}
+        <div className="flex flex-col items-center">
+          {/* Top section - using the same max-width as cards for consistency */}
+          <div className="w-full max-w-3xl mx-auto mb-8">
+            {/* Desktop layout (two columns) */}
+            <div className="hidden min-[426px]:flex flex-row items-center justify-between gap-8">
+              {/* Left column: Text content */}
+              <div className="w-1/2">
+                <h2 className="mb-6 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl">
                   <div className="flex flex-col md:block">
                     <div className="mb-[-0.075em]">
-                      <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Seedless.</span>
-                      <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Seedless</span>
+                      <span className="text-transparent bg-clip-text bg-text-gradient">Seedless.</span>
                     </div>
                     <div className="mb-[-0.075em]">
-                      <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Sovereign.</span>
-                      <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Sovereign</span>
+                      <span className="text-transparent bg-clip-text bg-text-gradient">Sovereign.</span>
                     </div>
                     <div>
-                      <span className="hidden min-[460px]:inline text-transparent bg-clip-text bg-text-gradient">Secure.</span>
-                      <span className="min-[460px]:hidden text-transparent bg-clip-text bg-text-gradient">Secure</span>
+                      <span className="text-transparent bg-clip-text bg-text-gradient">Secure.</span>
                     </div>
                   </div>
                 </h2>
-
-                <p className="vultisig-subheading max-w-2xl mx-auto min-[426px]:mx-0 mb-2">
+                <p className="vultisig-subheading mb-2">
                   The next generation of self-custody that eliminates seed phrases while enhancing security and control.
                 </p>
               </div>
-            </div>
 
-            {/* Right column: Image (visible only on larger screens) */}
-            <div className="hidden min-[426px]:flex min-[426px]:w-1/2 items-center">
-              <div className="relative max-w-[450px]">
+              {/* Right column: Image */}
+              <div className="w-1/2 flex justify-end">
                 <Image
                   src="/images/security.png"
                   alt="Vultisig App Screenshot"
@@ -54,10 +49,31 @@ const Hero: React.FC = () => {
                 />
               </div>
             </div>
+
+            {/* Mobile layout (stacked) */}
+            <div className="min-[426px]:hidden text-center">
+              <h2 className="mb-6 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl">
+                <div className="flex flex-col">
+                  <div className="mb-[-0.075em]">
+                    <span className="text-transparent bg-clip-text bg-text-gradient">Seedless</span>
+                  </div>
+                  <div className="mb-[-0.075em]">
+                    <span className="text-transparent bg-clip-text bg-text-gradient">Sovereign</span>
+                  </div>
+                  <div>
+                    <span className="text-transparent bg-clip-text bg-text-gradient">Secure</span>
+                  </div>
+                </div>
+              </h2>
+
+              <p className="vultisig-subheading mb-2 mx-auto">
+                The next generation of self-custody that eliminates seed phrases while enhancing security and control.
+              </p>
+            </div>
           </div>
 
-          {/* Enhanced Bullet List with glass-style cards - more transparent */}
-          <div className="space-y-6 max-w-3xl mx-auto min-[426px]:mx-0 mt-8">
+          {/* Feature cards section - already properly centered */}
+          <div className="w-full max-w-3xl mx-auto space-y-6 mb-12">
             <div className="p-[1px] rounded-2xl bg-gradient-to-r from-cyan-500/30 to-blue-600/30 group" data-bullet="seedless">
               <div className="bg-[#0a122a]/40 backdrop-blur-sm p-5 rounded-2xl transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20">
                 <div className="flex items-start gap-2">
@@ -107,26 +123,29 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Final callout text */}
-          <div className="mt-8 text-center">
-            <p className="text-white/80 font-mono text-lg animate-fadeIn">
-              Your devices are your multi-factor authorization. Trust yourself.
-            </p>
-          </div>
-
-          {/* Hero Image (visible only on mobile) */}
-          <div className="mt-10 relative block min-[426px]:hidden">
+          {/* Mobile image (only visible on mobile) */}
+          <div className="block min-[426px]:hidden w-full mb-12">
             <Image
               src="/images/security.png"
               alt="Vultisig App Screenshot"
               width={500}
               height={500}
-              className="mx-auto w-full h-auto object-contain"
+              className="mx-auto w-auto max-h-[380px] object-contain"
             />
           </div>
 
-          {/* CTA */}
-          <div className="mt-12 text-center">
+          {/* Final callout text */}
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <p className="text-white text-lg md:text-xl font-semibold mb-2 animate-fadeIn tracking-tight">
+              Your devices are your multi-factor.
+            </p>
+            <p className="text-white text-lg md:text-xl font-semibold animate-fadeIn tracking-tight">
+              You are the authority.
+            </p>
+          </div>
+
+          {/* CTA button */}
+          <div className="text-center">
             <a
               href="https://vultisig.com/download"
               className="inline-block border border-turquoise text-turquoise rounded-md px-5 py-3 hover:bg-turquoise hover:text-black transition-colors duration-300 text-[22px] font-mono"
