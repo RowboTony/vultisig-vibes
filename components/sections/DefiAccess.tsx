@@ -98,12 +98,16 @@ export default function DefiAccess() {
 
                 {/* Mascot image for Vulticonnect card */}
                 {feature.name === "Vulticonnect DeFi Extension" && (
-                  <img
-                    src="/images/Vulti_Agent_Mobile.png"
-                    alt="Vulti Agent"
-                    className="absolute bottom-0 right-0 w-24 opacity-70 pointer-events-none"
-                  />
+                  <div className="-bottom-12 right-0 sm:-bottom-20 sm:-right-20 absolute z-0 opacity-80 pointer-events-none">
+                    <img
+                      src="/images/Vulti_Agent_Mobile.png"
+                      alt="Vulti Agent Mascot"
+                      className="w-[120px] md:w-[160px] lg:w-[180px]"
+                    />
+                  </div>
                 )}
+
+
               </div>
             </div>
           ))}
