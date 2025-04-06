@@ -1,17 +1,18 @@
 import React from "react";
-import { Puzzle, Gift, TrendingUp, Bot } from 'lucide-react';
+import { Puzzle, Gift, TrendingUp, Bot, ArrowDownRight } from 'lucide-react';
 
 const features = [
   {
-    name: "Vulticonnect Plugin",
+    name: "Vulticonnect DeFi Extension",
     description: "Secure browser extension for connecting your vault to DeFi apps.",
     icon: <Puzzle className="text-cyanAccent h-7 w-7" strokeWidth={1.5} />,
     link: "https://vultisig.com/download/browser"
   },
   {
-    name: "Airdrop Ready",
+    name: "Airdrop Enabled",
     description: "Eligible vaults can interact with projects offering rewards and incentives.",
     icon: <Gift className="text-blueAccent h-7 w-7" strokeWidth={1.5} />,
+    airdropLink: "https://airdrop.vultisig.com/onboarding"
   },
   {
     name: "Auto-Rotate to Yield",
@@ -48,8 +49,14 @@ export default function DefiAccess() {
               key={index}
               className="p-[1px] rounded-2xl bg-gradient-to-r from-cyan-500/30 to-blue-600/30 group"
             >
-              <div className="bg-[#0a122a]/40 backdrop-blur-sm p-6 rounded-2xl h-full transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20">
-                <div className="flex items-center mb-3">
+              <div className={`relative bg-[#0a122a]/40 backdrop-blur-sm p-6 rounded-2xl h-full transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20 ${feature.name === "Airdrop Enabled" ? "bg-[url('/images/banner.png')] bg-cover bg-center bg-no-repeat" : ""}`}>
+
+                {/* Dark overlay for Airdrop card to maintain text readability */}
+                {feature.name === "Airdrop Enabled" && (
+                  <div className="absolute inset-0 bg-[#0a122a]/60 rounded-2xl"></div>
+                )}
+
+                <div className="flex items-center mb-3 relative z-10">
                   <div className="mr-3 flex-shrink-0">
                     {feature.icon}
                   </div>
@@ -57,20 +64,45 @@ export default function DefiAccess() {
                     {feature.name}
                   </h3>
                 </div>
-                <p className="text-gray-300 ml-10">
+                <p className="text-gray-300 ml-10 relative z-10">
                   {feature.description}
                 </p>
+
+                {/* Vulticonnect Extension link */}
                 {feature.link && (
-                  <div className="mt-4 ml-10">
+                  <div className="mt-4 ml-10 relative z-10">
                     <a
                       href={feature.link}
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center"
+                      className="inline-flex items-center gap-1 text-turquoise hover:text-cyan-300 transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Download →
+                      Download <ArrowDownRight className="w-4 h-4" />
                     </a>
                   </div>
+                )}
+
+                {/* Airdrop link */}
+                {feature.airdropLink && (
+                  <div className="mt-4 ml-10 relative z-10">
+                    <a
+                      href={feature.airdropLink}
+                      className="inline-flex items-center gap-1 text-turquoise hover:text-cyan-300 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Begin Claim →
+                    </a>
+                  </div>
+                )}
+
+                {/* Mascot image for Vulticonnect card */}
+                {feature.name === "Vulticonnect DeFi Extension" && (
+                  <img
+                    src="/images/Vulti_Agent_Mobile.png"
+                    alt="Vulti Agent"
+                    className="absolute bottom-0 right-0 w-24 opacity-70 pointer-events-none"
+                  />
                 )}
               </div>
             </div>
