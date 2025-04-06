@@ -10,6 +10,7 @@ import RespawnRestore from "./sections/RespawnRestore";
 import SecureExistingWallet from "./sections/SecureExistingWallet";
 import TrustThroughTransparency from "./sections/TrustThroughTransparency";
 import DefiAccess from "./sections/DefiAccess";
+import Downloads from "./sections/Downloads";
 import Nav from "./Nav";
 import VultisigLogo from "./VultisigLogo";
 
@@ -126,6 +127,8 @@ export default function Layout({ children }) {
             <RespawnRestore />
             <GradientDivider />
             <TrustThroughTransparency />
+            <GradientDivider />
+            <Downloads />
             <GradientDivider className="my-4" />
           </>
         ) : (

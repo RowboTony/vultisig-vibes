@@ -114,9 +114,9 @@ export default function SecureExistingWallet() {
             </p>
           </div>
           {/* CTA button */}
-          <div id="download" className="text-center mt-10 mb-4">
+          <div className="text-center mt-10 mb-4">
             <a
-              href="https://vultisig.com/download"
+              href="#download"
               className="inline-block border border-turquoise text-turquoise rounded-md px-5 py-3 hover:bg-turquoise hover:text-black transition-colors duration-300 text-[22px] font-mono"
             >
               Upgrade Now
