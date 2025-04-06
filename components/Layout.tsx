@@ -115,15 +115,15 @@ export default function Layout({ children }) {
           <>
             <Hero />
             <GradientDivider />
+            <SecureExistingWallet />
+            <GradientDivider />
             <FeatureGrid />
             <GradientDivider />
-            <RespawnRestore />
-            <GradientDivider />
-            <SecureExistingWallet />
+            <ProgrammableSovereignty />
             <GradientDivider />
             <DefiAccess />
             <GradientDivider />
-            <ProgrammableSovereignty />
+            <RespawnRestore />
             <GradientDivider />
             <TrustThroughTransparency />
             <GradientDivider className="my-4" />

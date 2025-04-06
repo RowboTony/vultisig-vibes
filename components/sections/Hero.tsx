@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
               {/* Right column: Image */}
               <div className="w-1/2 flex justify-end">
                 <Image
-                  src="/images/security.png"
+                  src="/images/devices.png"
                   alt="Vultisig App Screenshot"
                   width={500}
                   height={500}

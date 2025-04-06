@@ -23,9 +23,9 @@ const Nav = () => {
   // Shortened navigation labels for clarity
   const navItems = [
     { label: "Vault", href: "#vault" },
-    { label: "Technology", href: "#core-features" },
     { label: "How It Works", href: "#secure-wallet" },
-    { label: "Features", href: "#programmable" },
+    { label: "Vault Tech", href: "#core-features" },
+    { label: "Smart Vault", href: "#programmable" },
     { label: "DeFi Access", href: "#defi-access" },
     { label: "Recovery", href: "#respawn" },
     { label: "Trust", href: "#trust" },
