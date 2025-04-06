@@ -26,7 +26,7 @@ const Nav = () => {
     { label: "Technology", href: "#core-features" },
     { label: "How It Works", href: "#secure-wallet" },
     { label: "Features", href: "#programmable" },
-    { label: "DeFi Access", href: "#defi", disabled: true },
+    { label: "DeFi Access", href: "#defi-access" },
     { label: "Recovery", href: "#respawn" },
     { label: "Trust", href: "#trust" },
     { label: "Download", href: "#download" },
