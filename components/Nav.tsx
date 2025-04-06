@@ -123,7 +123,7 @@ const Nav = () => {
             </button>
           </div>
           <nav className="space-y-4 text-white mt-8">
-            {navItems.filter(item => !item.disabled).map((item) => (
+            {navItems.map((item) => (
               <a
                 key={item.label}
                 href={isHomePage ? item.href : `/${item.href}`}
