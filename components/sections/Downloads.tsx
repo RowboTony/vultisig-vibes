@@ -9,7 +9,7 @@ const downloads = [
   },
   {
     name: "macOS",
-    icon: "/images/mac-os.png",
+    icon: "/images/mac-os.webp",
     link: "https://github.com/vultisig/vultisig-ios/releases/download/v1.14.0/VultisigApp.v1.14.0.signed.pkg",
     sha: "182f4aee5a10a29190f2b2639878a15294abf357036e2e4a73163e65b6a6334c",
   },
@@ -20,7 +20,7 @@ const downloads = [
   },
   {
     name: "Windows",
-    icon: "/images/windows.png",
+    icon: "/images/windows.webp",
     link: "https://github.com/vultisig/vultisig-windows/releases/download/v1.0.19/Vultisig-amd64-installer-v1.0.19.exe",
     sha: "5c306cccd03018fb673b89319b17913b5aaa19712cd15a5a9bfef66b39f91d4f",
   },
@@ -64,7 +64,20 @@ export default function Downloads() {
                 onClick={() => navigator.clipboard.writeText(d.sha || "")}
                 className="text-turquoise hover:text-white transition-colors"
               >
-                <ClipboardCopyIcon className="w-5 h-5" />
+                <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="1.5"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  className="w-5 h-5"
+>
+  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+</svg>
+
               </button>
             </div>
           ))}
