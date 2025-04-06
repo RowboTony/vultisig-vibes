@@ -54,7 +54,7 @@ const Nav = () => {
     <>
       {/* Desktop Nav Links - Only visible on 2xl screens (1536px+) */}
       <div className="hidden 2xl:flex space-x-6 font-mono tracking-wide">
-        {navItems.filter(item => !item.disabled).map((item) => (
+        {navItems.map((item) => (
           <a
             key={item.label}
             href={isHomePage ? item.href : `/${item.href}`}
