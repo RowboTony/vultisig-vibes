@@ -8,6 +8,8 @@ import FeatureGrid from "./FeatureGrid";
 import ProgrammableSovereignty from "./sections/ProgrammableSovereignty";
 import RespawnRestore from "./sections/RespawnRestore";
 import SecureExistingWallet from "./sections/SecureExistingWallet";
+import TrustThroughTransparency from "./sections/TrustThroughTransparency";
+import DefiAccess from "./sections/DefiAccess";
 import Nav from "./Nav";
 import VultisigLogo from "./VultisigLogo";
 
@@ -119,7 +121,12 @@ export default function Layout({ children }) {
             <GradientDivider />
             <SecureExistingWallet />
             <GradientDivider />
+            <DefiAccess />
+            <GradientDivider />
             <ProgrammableSovereignty />
+            <GradientDivider />
+            <TrustThroughTransparency />
+            <GradientDivider className="my-4" />
           </>
         ) : (
           children

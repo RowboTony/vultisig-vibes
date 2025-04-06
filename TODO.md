@@ -5,11 +5,10 @@
 - Optimize desktop experience above 2560px
 
 ## TODO
-- Reduce the prominence of info-cards
 - Add active link highlight (ScrollSpy) for nav
 - Add framer-motion scroll-trigger fade-up
-- Footer version: site pulse
-- Check about-site typography on all viewport sizes
+- Footer site version: site pulse
+- Verify about-site typography on all viewport sizes
 
 ## Optional / Extra Credit
 - Animate "Respawnable"
