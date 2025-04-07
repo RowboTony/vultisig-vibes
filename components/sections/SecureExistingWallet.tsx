@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 export default function SecureExistingWallet() {
@@ -8,6 +8,34 @@ export default function SecureExistingWallet() {
     "trust", "yourself", "hold", "your",
     "keys", "acel", "anon", "..."
   ];
+
+  const [isAnonVisible, setIsAnonVisible] = useState(false);
+  const anonRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsAnonVisible(true);
+          // Disconnect after first animation
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (anonRef.current) {
+      observer.observe(anonRef.current);
+    }
+
+    return () => {
+      if (anonRef.current) {
+        observer.disconnect();
+      }
+    };
+  }, []);
 
   return (
     <section id="secure-wallet" className="pt-7 relative overflow-hidden">
@@ -95,6 +123,13 @@ export default function SecureExistingWallet() {
                         >
                           {word}
                         </a>
+                      ) : index === 10 ? (
+                        <span
+                          ref={anonRef}
+                          className={`${isAnonVisible ? "animate-pulse-twice" : ""}`}
+                        >
+                          {word}
+                        </span>
                       ) : (
                         word
                       )}
