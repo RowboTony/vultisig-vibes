@@ -4,12 +4,14 @@ interface GradientHeadlineProps {
   children: React.ReactNode;
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
+  useLightGradient?: boolean;
 }
 
 export default function GradientHeadline({
   children,
   className = '',
-  size = 'lg'
+  size = 'lg',
+  useLightGradient
 }: GradientHeadlineProps) {
   const sizeClasses = {
     sm: 'text-xl md:text-2xl lg:text-3xl',
@@ -18,9 +20,14 @@ export default function GradientHeadline({
     xl: 'text-4xl md:text-5xl lg:text-6xl'
   };
 
+  // If useLightGradient is not explicitly set, randomly determine whether to use light gradient
+  // This creates a random pattern of gradient styles throughout the site
+  const useLight = useLightGradient !== undefined ? useLightGradient : Math.random() > 0.5;
+  const gradientClass = useLight ? "gradient-text-light" : "gradient-text";
+
   return (
     <h2 className={`font-extrabold tracking-tight leading-[0.95] uppercase ${sizeClasses[size]} ${className}`}>
-      <span className="gradient-text">{children}</span>
+      <span className={gradientClass}>{children}</span>
     </h2>
   );
 }

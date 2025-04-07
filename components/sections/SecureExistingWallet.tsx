@@ -77,7 +77,7 @@ export default function SecureExistingWallet() {
                 {displayWords.map((word, index) => (
                   <div
                     key={index}
-                    className={`rounded-md border px-4 py-2 text-sm font-mono text-left relative ${index === 11
+                    className={`rounded-md border px-3 py-2 text-xs font-mono text-left relative ${index === 11
                         ? "border-cyan-400/50 bg-cyan-400/5 shadow-[0_0_15px_rgba(0,224,255,0.15)] text-cyan-300"
                         : "border-white/20 bg-white/5 text-white/70"
                       }`}

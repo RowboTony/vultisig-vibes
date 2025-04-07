@@ -22,13 +22,13 @@ const Hero: React.FC = () => {
                 <h2 className="mb-6 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl">
                   <div className="flex flex-col md:block">
                     <div className="mb-[-0.075em]">
-                      <span className="text-transparent bg-clip-text bg-text-gradient">Seedless.</span>
+                      <span className="gradient-text-light">Seedless.</span>
                     </div>
                     <div className="mb-[-0.075em]">
                       <span className="text-transparent bg-clip-text bg-text-gradient">Sovereign.</span>
                     </div>
                     <div>
-                      <span className="text-transparent bg-clip-text bg-text-gradient">Secure.</span>
+                      <span className="gradient-text-light">Secure.</span>
                     </div>
                   </div>
                 </h2>
@@ -55,13 +55,13 @@ const Hero: React.FC = () => {
               <h2 className="mb-6 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl">
                 <div className="flex flex-col">
                   <div className="mb-[-0.075em]">
-                    <span className="text-transparent bg-clip-text bg-text-gradient">Seedless</span>
+                    <span className="gradient-text-light">Seedless</span>
                   </div>
                   <div className="mb-[-0.075em]">
                     <span className="text-transparent bg-clip-text bg-text-gradient">Sovereign</span>
                   </div>
                   <div>
-                    <span className="text-transparent bg-clip-text bg-text-gradient">Secure</span>
+                    <span className="gradient-text-light">Secure</span>
                   </div>
                 </div>
               </h2>
