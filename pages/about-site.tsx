@@ -10,7 +10,7 @@ export default function AboutSitePage() {
       <div className="flex flex-col items-center justify-center py-12 -mb-2">
         <AnimatedVultisigLogo size="large" className="mb-8" />
         <h2 className="text-2xl md:text-3xl font-bold text-center gradient-text-light mt-4">
-          Seedless by design. Sovereign by default.
+          <span className="max-[425px]:block">Seedless by design.</span> <span className="max-[425px]:block">Sovereign by default.</span>
         </h2>
       </div>
 
@@ -42,10 +42,10 @@ export default function AboutSitePage() {
 
       <div className="bg-gray-900 rounded-lg p-6 my-6 border border-cyanAccent text-sm text-gray-100 font-mono">
         <p className="mb-2">
-          <strong>🚨 Proof of Work</strong>
+          <strong>Proof of Work</strong>
         </p>
-        <p>🔗 Live site: <a className="text-cyanAccent hover:text-turquoise transition-colors" href="https://vultisig-vibes.vercel.app" target="_blank" rel="noopener noreferrer">https://vultisig-vibes.vercel.app</a></p>
-        <p>🛠️ GitHub Repo: <a className="text-cyanAccent hover:text-turquoise transition-colors break-all overflow-wrap-anywhere" href="https://github.com/RowboTony/vultisig-vibes" target="_blank" rel="noopener noreferrer">https://github.com/RowboTony/vultisig-vibes</a></p>
+        <p className="mb-2 sm:mb-1">Live site: <br className="sm:hidden" /><a className="text-cyanAccent hover:text-turquoise transition-colors duration-300" href="https://vultisig-vibes.vercel.app" target="_blank" rel="noopener noreferrer">https://vultisig-vibes.vercel.app</a></p>
+        <p>GitHub Repo: <br className="sm:hidden" /><a className="text-cyanAccent hover:text-turquoise transition-colors duration-300 break-all overflow-wrap-anywhere" href="https://github.com/RowboTony/vultisig-vibes" target="_blank" rel="noopener noreferrer">https://github.com/RowboTony/vultisig-vibes</a></p>
       </div>
 
       <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase gradient-text-light">SUBMISSION SUMMARY</h2>
@@ -61,7 +61,7 @@ export default function AboutSitePage() {
 
       <GradientDivider className="my-6" />
 
-      <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase text-transparent bg-clip-text bg-text-gradient">WHERE I STARTED</h3>
+      <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase gradient-text-light">WHERE I STARTED</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">
         Already familiar with Vultisig's goals and ethos, I didn't have to "study" the brand - I've
         lived with it, used it, and followed its evolution closely. I've submitted bug reports,
@@ -98,16 +98,14 @@ export default function AboutSitePage() {
           everywhere, on any device."
         </p>
       </blockquote>
-      <p className="text-lg text-gray-300 leading-relaxed mb-4">
-        Every headline. Every subheader. Every call to action.
-      </p>
+      <p className="text-lg text-gray-300 leading-relaxed mb-4">Every headline. Every subheader. Every call to action.</p>
       <p className="text-lg text-gray-300 leading-relaxed">
         Nothing was filler. Everything was intentional.
       </p>
 
       <GradientDivider className="my-6"/>
 
-      <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase text-transparent bg-clip-text bg-text-gradient">DESIGN ETHOS</h3>
+      <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase gradient-text-light">DESIGN ETHOS</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">
         The existing <a href="https://vultisig.com" target="_blank" rel="noopener noreferrer" className="text-cyanAccent hover:text-turquoise transition-colors duration-300">vultisig.com</a> and sub-sites already look fantastic - credit where it's due. The brand, mascot, color scheme, and layout all reflect world-class design instincts.
         That's what made the <a href="https://x.com/vultisig/status/1905309260231196795" target="_blank" rel="noopener noreferrer" className="text-cyanAccent hover:text-turquoise transition-colors duration-300">vibe coding challenge</a> so surprising. It already felt "done." - they don't need a new website.
@@ -168,7 +166,7 @@ export default function AboutSitePage() {
 
       <GradientDivider className="my-6" />
 
-      <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase text-transparent bg-clip-text bg-text-gradient">TECHNICAL BUILD</h3>
+      <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase gradient-text-light">TECHNICAL BUILD</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">This was never a Figma mockup. It was production-level code from the start.</p>
       <ul className="list-disc pl-6 my-6 space-y-3 text-gray-300">
         <li className="text-lg">Built in <strong className="text-cyanAccent">React + Tailwind</strong>, with clean JSX and modular components</li>
@@ -215,7 +213,7 @@ export default function AboutSitePage() {
 
       <GradientDivider />
 
-      <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase text-transparent bg-clip-text bg-text-gradient">FINAL THOUGHT</h3>
+      <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono tracking-tight mb-8 uppercase gradient-text-light">FINAL THOUGHT</h3>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">Vultisig didn't just build something cool.</p>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">Vultisig built the missing piece.</p>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">
@@ -229,8 +227,8 @@ export default function AboutSitePage() {
       </p>
 
       <div className="mt-12 mb-6">
-        <Link href="/" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blueAccent to-cyanAccent text-white rounded-md transition-colors hover:opacity-90">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <Link href="/" className="inline-block border border-turquoise text-turquoise rounded-md px-5 py-3 hover:bg-turquoise hover:text-black transition-colors duration-300 text-[22px] font-mono">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline-block" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
           </svg>
           Back to home
