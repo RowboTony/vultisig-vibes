@@ -37,7 +37,14 @@ export default function AboutSitePage() {
           </a>
         </div>
       </h1>
-      {/* Hero section with animated logo */}
+
+      <div className="bg-gray-900 rounded-lg p-6 my-6 border border-cyanAccent text-sm text-gray-100 font-mono">
+        <p className="mb-2">
+          <strong>🚨 Proof of Work</strong>
+        </p>
+        <p>🔗 Live site: <a className="text-cyanAccent hover:text-turquoise transition-colors" href="https://vultisig-vibes.vercel.app" target="_blank" rel="noopener noreferrer">https://vultisig-vibes.vercel.app</a></p>
+        <p>🛠️ GitHub Repo: <a className="text-cyanAccent hover:text-turquoise transition-colors break-all overflow-wrap-anywhere" href="https://github.com/RowboTony/vultisig-vibes" target="_blank" rel="noopener noreferrer">https://github.com/RowboTony/vultisig-vibes</a></p>
+      </div>
 
       <h2 className="text-3xl font-bold mt-12 mb-6 font-mono text-cyanAccent">Submission Summary</h2>
       <p className="text-lg text-gray-300 leading-relaxed mb-4">Thank you for this opportunity.</p>
