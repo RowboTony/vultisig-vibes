@@ -4,7 +4,7 @@ export default function Downloads() {
   return (
     <section id="download" className="pt-20 px-6 pb-6 relative text-center">
       <h2 className="w-full mb-8">
-        <span className="text-transparent bg-clip-text bg-text-gradient text-4xl md:text-5xl lg:text-6xl uppercase font-mono tracking-tight">
+        <span className="text-transparent bg-clip-text gradient-text-light text-4xl md:text-5xl lg:text-6xl uppercase font-mono tracking-tight">
           Download Vultisig
         </span>
       </h2>

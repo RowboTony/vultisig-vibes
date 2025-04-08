@@ -36,7 +36,7 @@ export default function TrustThroughTransparency() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header with Gradient Text */}
         <h2 className="mb-8 font-mono font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl text-center">
-          <span className="text-transparent bg-clip-text bg-text-gradient">
+          <span className="text-transparent bg-clip-text gradient-text-light">
             Trust Through Transparency
           </span>
         </h2>

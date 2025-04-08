@@ -9,7 +9,7 @@ export default function RespawnRestore() {
 
       <div className="vultisig-container max-w-4xl mx-auto relative z-10">
         <h2 className="mb-8 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl text-center">
-          <span className="text-transparent bg-clip-text bg-text-gradient">Respawn & Restore</span>
+          <span className="text-transparent bg-clip-text gradient-text-light">Respawn & Restore</span>
         </h2>
 
         {/* Glass card container - more transparent */}
@@ -46,7 +46,7 @@ export default function RespawnRestore() {
               <div className="pt-4">
                 <p className="vultisig-paragraph font-medium">Your funds stay in place. Your vault stays sovereign.</p>
                 <p className="vultisig-paragraph mt-4 text-xl font-semibold">
-                  Vultisig isn't just recoverable. It's <span className="text-transparent bg-clip-text bg-text-gradient-alt">respawnable</span>.
+                  Vultisig isn't just recoverable. It's <span className="text-transparent bg-clip-text gradient-text-light">respawnable</span>.
                 </p>
               </div>
             </div>

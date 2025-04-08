@@ -52,10 +52,10 @@ export default function SecureExistingWallet() {
                 <h2 className="mb-6 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl md:text-5xl lg:text-6xl">
                   <div className="flex flex-col md:block">
                     <div className="mb-[-0.075em]">
-                      <span className="text-transparent bg-clip-text bg-text-gradient">Secure</span>
+                      <span className="text-transparent bg-clip-text gradient-text-light">Secure</span>
                     </div>
                     <div>
-                      <span className="text-transparent bg-clip-text bg-text-gradient">Wallet</span>
+                      <span className="text-transparent bg-clip-text gradient-text-light">Wallet</span>
                     </div>
                   </div>
                 </h2>
@@ -79,7 +79,7 @@ export default function SecureExistingWallet() {
             {/* Mobile: Stacked Layout */}
             <div className="min-[426px]:hidden text-center">
               <h2 className="mb-6 font-extrabold tracking-tight leading-[0.95] uppercase text-4xl">
-                <span className="text-transparent bg-clip-text bg-text-gradient">Secure Wallet</span>
+                <span className="text-transparent bg-clip-text gradient-text-light">Secure Wallet</span>
               </h2>
               <p className="vultisig-subheading mb-2">
                 Vultisig replaces fragile seed phrases with modern cryptography—Threshold Signature Schemes (TSS) powered by Distributed Key Generation (DKG).
