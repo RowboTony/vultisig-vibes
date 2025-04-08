@@ -6,7 +6,11 @@ export default function TrustThroughTransparency() {
     {
       icon: <Github className="text-cyanAccent h-7 w-7" strokeWidth={1.5} />,
       title: "Open Source Code",
-      description: "Publicly available on GitHub. Peer-reviewed. Transparent by default.",
+      description: (
+        <>
+          Publicly available on <span className="text-cyanAccent">GitHub</span>. Peer-reviewed. Transparent by default.
+        </>
+      ),
       link: "https://github.com/vultisig"
     },
     {
@@ -17,7 +21,11 @@ export default function TrustThroughTransparency() {
     {
       icon: <Award className="text-turquoise h-7 w-7" strokeWidth={1.5} />,
       title: "Proven Track Record",
-      description: "Built by the founder of THORChain. Vultisig is trusted by core protocol teams.",
+      description: (
+        <>
+          Built by the founder of <span className="text-cyanAccent">THORChain</span>. Vultisig is trusted by core protocol teams.
+        </>
+      ),
       link: "https://thorchain.org/"
     },
   ];
@@ -47,7 +55,7 @@ export default function TrustThroughTransparency() {
               className="p-[1px] rounded-2xl bg-gradient-to-r from-cyan-500/30 to-blue-600/30 group"
             >
               {feature.link ? (
-                <a 
+                <a
                   href={feature.link}
                   className="block h-full"
                   target="_blank"
