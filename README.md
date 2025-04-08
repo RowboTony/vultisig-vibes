@@ -127,11 +127,11 @@ Just real sovereignty, running open-source, on hardware I already own.
 
 ### Final Thought
 
-Vultisig didn’t just build something cool.
-Vultisig built the missing piece.
+Vultisig didn’t just build something cool.<br>
+Vultisig built the missing piece.<br>
 
-So I didn’t treat this like a design gig.
-I treated it like a legacy.
+So I didn’t treat this like a design gig.<br>
+I treated it like a legacy.<br>
 One I want to be part of.
 
 Respectfully,
