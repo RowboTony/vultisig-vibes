@@ -46,7 +46,7 @@ export default function RespawnRestore() {
               <div className="pt-4">
                 <p className="vultisig-paragraph font-medium">Your funds stay in place. Your vault stays sovereign.</p>
                 <p className="vultisig-paragraph mt-4 text-xl font-semibold">
-                  Vultisig isn't just recoverable. It's <span className="text-transparent bg-clip-text gradient-text-light">respawnable</span>.
+                  Vultisig isn't just recoverable. It's <span className="text-cyanAccent">respawnable</span>.
                 </p>
               </div>
             </div>

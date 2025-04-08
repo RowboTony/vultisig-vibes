@@ -49,71 +49,122 @@ export default function DefiAccess() {
               key={index}
               className="p-[1px] rounded-2xl bg-gradient-to-r from-cyan-500/30 to-blue-600/30 group"
             >
-              <div className={`relative bg-[#0a122a]/40 backdrop-blur-sm p-6 rounded-2xl h-full transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20 ${feature.name === "Airdrop Enabled" ? "bg-[url('/images/banner.png')] bg-cover bg-center bg-no-repeat" : ""}`}>
+              {(feature.link || feature.airdropLink) ? (
+                <a
+                  href={feature.link || feature.airdropLink}
+                  className="block h-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className={`relative bg-[#0a122a]/40 backdrop-blur-sm p-6 rounded-2xl h-full transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20 ${feature.name === "Airdrop Enabled" ? "bg-[url('/images/banner.png')] bg-cover bg-center bg-no-repeat" : ""}`}>
 
-                {/* Dark overlay for Airdrop card to maintain text readability */}
-                {feature.name === "Airdrop Enabled" && (
-                  <div className="absolute inset-0 bg-[#0a122a]/60 rounded-2xl"></div>
-                )}
+                    {/* Dark overlay for Airdrop card to maintain text readability */}
+                    {feature.name === "Airdrop Enabled" && (
+                      <div className="absolute inset-0 bg-[#0a122a]/60 rounded-2xl"></div>
+                    )}
 
-                <div className="flex items-center mb-3 relative z-10">
-                  <div className="mr-3 flex-shrink-0">
-                    {feature.icon}
+                    <div className="flex items-center mb-3 relative z-10">
+                      <div className="mr-3 flex-shrink-0">
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-xl font-mono tracking-tight text-cyanAccent">
+                        {feature.name}
+                      </h3>
+                    </div>
+                    <p className="text-gray-300 ml-10 relative z-10">
+                      {feature.description}
+                    </p>
+
+                    {/* Vulticonnect Extension link */}
+                    {feature.link && (
+                      <div className="mt-4 ml-10 relative z-10">
+                        <span
+                          className="inline-flex items-center gap-1 text-cyanAccent hover:text-turquoise transition-colors duration-300"
+                        >
+                          Download <ArrowDownRight className="w-4 h-4" />
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Airdrop link */}
+                    {feature.airdropLink && (
+                      <div className="mt-4 ml-10 relative z-10">
+                        <span
+                          className="inline-flex items-center gap-1 text-cyanAccent hover:text-turquoise transition-colors duration-300"
+                        >
+                          Begin Claim →
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Mascot image for Vulticonnect card */}
+                    {feature.name === "Vulticonnect DeFi Extension" && (
+                      <div className="
+                        -bottom-12 right-0
+                        sm:-bottom-24 sm:-right-20
+                        lg:-bottom-24 lg:-right-20
+                        xl:-bottom-24 xl:-right-20
+                        absolute z-0 opacity-80 pointer-events-none">
+                        <img
+                          src="/images/Vulti_Agent_Mobile.png"
+                          alt="Vulti Agent Mascot"
+                          className="w-[120px] md:w-[160px] lg:w-[180px]"
+                        />
+                      </div>
+                    )}
                   </div>
-                  <h3 className="text-xl font-mono tracking-tight text-cyanAccent">
-                    {feature.name}
-                  </h3>
+                </a>
+              ) : (
+                <div className={`relative bg-[#0a122a]/40 backdrop-blur-sm p-6 rounded-2xl h-full transition-all duration-200 ease-in-out group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-cyan-500/20 ${feature.name === "Airdrop Enabled" ? "bg-[url('/images/banner.png')] bg-cover bg-center bg-no-repeat" : ""}`}>
+
+                  {/* Dark overlay for Airdrop card to maintain text readability */}
+                  {feature.name === "Airdrop Enabled" && (
+                    <div className="absolute inset-0 bg-[#0a122a]/60 rounded-2xl"></div>
+                  )}
+
+                  <div className="flex items-center mb-3 relative z-10">
+                    <div className="mr-3 flex-shrink-0">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-mono tracking-tight text-cyanAccent">
+                      {feature.name}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 ml-10 relative z-10">
+                    {feature.description}
+                  </p>
+
+                  {/* Airdrop link */}
+                  {feature.airdropLink && (
+                    <div className="mt-4 ml-10 relative z-10">
+                      <a
+                        href={feature.airdropLink}
+                        className="inline-flex items-center gap-1 text-cyanAccent hover:text-turquoise transition-colors duration-300"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Begin Claim →
+                      </a>
+                    </div>
+                  )}
+
+                  {/* Mascot image for Vulticonnect card */}
+                  {feature.name === "Vulticonnect DeFi Extension" && (
+                    <div className="
+                      -bottom-12 right-0
+                      sm:-bottom-24 sm:-right-20
+                      lg:-bottom-24 lg:-right-20
+                      xl:-bottom-24 xl:-right-20
+                      absolute z-0 opacity-80 pointer-events-none">
+                      <img
+                        src="/images/Vulti_Agent_Mobile.png"
+                        alt="Vulti Agent Mascot"
+                        className="w-[120px] md:w-[160px] lg:w-[180px]"
+                      />
+                    </div>
+                  )}
                 </div>
-                <p className="text-gray-300 ml-10 relative z-10">
-                  {feature.description}
-                </p>
-
-                {/* Vulticonnect Extension link */}
-                {feature.link && (
-                  <div className="mt-4 ml-10 relative z-10">
-                    <a
-                      href={feature.link}
-                      className="inline-flex items-center gap-1 text-turquoise hover:text-cyan-300 transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Download <ArrowDownRight className="w-4 h-4" />
-                    </a>
-                  </div>
-                )}
-
-                {/* Airdrop link */}
-                {feature.airdropLink && (
-                  <div className="mt-4 ml-10 relative z-10">
-                    <a
-                      href={feature.airdropLink}
-                      className="inline-flex items-center gap-1 text-turquoise hover:text-cyan-300 transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Begin Claim →
-                    </a>
-                  </div>
-                )}
-
-                {/* Mascot image for Vulticonnect card */}
-                {feature.name === "Vulticonnect DeFi Extension" && (
-                  <div className="
-                    -bottom-12 right-0
-                    sm:-bottom-24 sm:-right-20
-                    lg:-bottom-24 lg:-right-20
-                    xl:-bottom-24 xl:-right-20
-                    absolute z-0 opacity-80 pointer-events-none">
-                    <img
-                      src="/images/Vulti_Agent_Mobile.png"
-                      alt="Vulti Agent Mascot"
-                      className="w-[120px] md:w-[160px] lg:w-[180px]"
-                    />
-                  </div>
-                )}
-
-
-              </div>
+              )}
             </div>
           ))}
         </div>
