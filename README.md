@@ -51,7 +51,7 @@ The existing [vultisig.com](https://vultisig.com) and sub-sites already look fan
 
 With a focus on simplicity, I aimed to create a clean and streamlined design. By minimizing unnecessary elements and using animations sparingly, I prioritized the mobile user experience. The goal was to ensure the site feels like a secure and trustworthy platform, free from distractions or gimmicks.
 
-Even the bot mascot (R2V2 I've named it) — clever and well-designed — is gently reserved for the airdrop section. A nod to the degen crowd, but never at the expense of institutional trust.
+Even the bot mascot (who I've named 'R2V2') — clever and well-designed — is gently reserved for the airdrop section. A nod to the degen crowd, but never at the expense of institutional trust.
 
 > **No hype. No overload. Just clarity, elegance, and purpose.**
 
