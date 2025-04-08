@@ -132,9 +132,9 @@ Vultisig built the missing piece.<br>
 
 So I didn’t treat this like a design gig.<br>
 I treated it like a legacy.<br>
-One I want to be part of.
+One I want to be part of.<br>
 
-Respectfully,
+Respectfully,<br>
 — Tony ("RowboTony")
 
 ---
